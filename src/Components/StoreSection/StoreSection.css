@@ -1,0 +1,56 @@
+.store-section {
+    background-image: url('../../assets/images/store.png');
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.inner-card {
+    background-color: white;
+    width: 45%;
+    border-radius: 7px;
+    padding: 30px;
+    align-items: start;
+}
+.inner-card h3 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 10px;
+    text-align: left;
+    width: fit-content;
+}
+.description-title {
+    font-size: medium;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.description {
+    font-size:small;
+    max-width: 70%;
+    
+}
+.store-section button {
+    padding: 10px 20px;
+    background-color: #e30613;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .store-section button:hover {
+    background-color: #ffffff; 
+    border: solid #e30613 1px;
+    color: #e30613;
+  }
+  .inner-card span {
+   color: #e30613;
+   border-bottom: solid #e30613 5px;
+   font-weight: 700;
+
+  }
+  @media (max-width: 768px) {
+    .inner-card {
+      width: 100%; /* 1 card per row */
+    }
+  }

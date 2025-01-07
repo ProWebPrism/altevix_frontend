@@ -1,0 +1,99 @@
+.contact-section {
+    display: flex;
+    background: #e60000;
+}
+.left-section {
+    background-color: #e60000;
+    width: 100%;
+    position: relative;
+    padding: 40px 0px;
+}
+.right-section img {
+ height: 100%;
+}
+.contact-card {
+    background-color: white;
+    border-radius: 7px;
+    padding: 40px 30px;
+    position: relative;
+    left: 40%;
+    max-width: 700px;
+}
+
+.contact-card h3 {
+    font-size: 2.5rem;
+    color: #e60000;
+    margin-bottom: 20px;
+    text-align: left;
+    width: fit-content;
+    font-weight: 700;
+    border-bottom: #e60000 solid 5px;
+}
+.contact-card input {
+    margin-bottom: 20px;
+    border-bottom: #e60000 1px solid;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+.contact-form input::placeholder {
+    color: #555; 
+}
+.contact-form button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: #e60000;
+    width: 20%;
+    border: none;
+    border-radius: 7px;
+    font-size: medium;
+    cursor: pointer;
+}
+.contact-form button:hover {
+    border: #e60000 1px solid;
+    color: #e60000;
+    background-color: #ffffff;
+}
+.contact-section .brand-name {
+    color: #ffffff;
+    writing-mode: vertical-rl; 
+    transform: rotate(180deg); 
+    text-align: center; 
+    font-size: 3.2rem;
+    font-weight: 800;
+    position: absolute;
+    left: 33%;
+    top: 31%;
+}
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+    }
+
+    .left-section {
+        padding: 20px; 
+    }
+
+    .contact-card {
+        max-width: 100%;
+        left: 0;
+        transform: none; 
+        padding: 20px; 
+    }
+
+    .contact-card h3 {
+        font-size: 2rem; 
+    }
+
+    .contact-form button {
+        width: 50%; 
+    }
+
+    .contact-section .brand-name {
+        font-size: 2rem;
+        transform: rotate(0deg);
+    }
+}
+

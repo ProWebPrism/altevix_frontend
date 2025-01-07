@@ -1,0 +1,95 @@
+  /* Section Styles */
+  .our-elevators {
+    background-color: #fff;
+    padding: 50px 0px;
+    text-align: center;
+  }
+  
+  /* Title and Description */
+  .section-title {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 10px;
+    border-bottom: 5px;
+    border-bottom: 5px solid #e60000;
+    text-align: left;
+    width: fit-content;
+  }
+  
+  .section-title .highlight {
+    color: #e60000;
+    font-weight: 700;
+  }
+  
+  .section-description {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  
+  /* Grid Styles */
+  .elevator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Card Styles */
+  .elevator-card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  .elevator-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Image */
+  .elevator-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  /* Card Content */
+  .elevator-title {
+    font-size: 1.2rem;
+    color: #ed0a0a;
+    margin: 10px 0;
+    font-weight: 800;
+  }
+  
+  .elevator-description {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  /* Button */
+  .learn-more-btn {
+    display: inline-block;
+    background-color: #e60000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .learn-more-btn:hover {
+    background-color: #ffffff; 
+    border: solid #e30613 1px;
+    color: #e30613;
+  }
+  
