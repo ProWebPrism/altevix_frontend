@@ -1,0 +1,59 @@
+.journey-section {
+    font-family: 'Inter';
+    padding: 50px 0px;
+    position: relative;
+    z-index: -2;
+    background-color: rgb(226, 225, 225);
+}
+.journey-content {
+    display: flex;
+    padding: 50px 0px;
+    justify-content: space-between;
+    gap: 100px;
+}
+.right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.right h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Inter';
+    margin-bottom: 20px;
+}
+.right span {
+    color: rgb(221, 4, 4);
+    font-family: 'Inter';
+}
+.left {
+    position: relative;
+    width: 35%;
+}
+.bground {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.bground::after {
+    content: "";
+    position: absolute;
+    top: -28px;
+    right: 31px;
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.304);
+    height: 100%;
+    z-index: -1;
+}
+@media (max-width:768px) {
+    .journey-content {
+        flex-direction: column;
+    }
+    .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

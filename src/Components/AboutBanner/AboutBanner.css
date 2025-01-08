@@ -1,0 +1,20 @@
+.about-banner {
+    background-image:url('../../assets//images/about-banner.png');
+    color: white;
+    width: 100%;
+}
+.about-banner img {
+    object-fit: cover;
+}
+.about-banner h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    font-family: 'Inter';
+}
+.about-banner .about-content {
+    display: flex;
+    align-items: center;
+    height: 500px;
+}
+
+
