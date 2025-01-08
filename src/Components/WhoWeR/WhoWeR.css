@@ -7,11 +7,10 @@
     display: flex;
     padding: 50px 0px;
     justify-content: space-between;
-    gap: 100px;
   }
   
-  .left-side {
-    width: 50%;
+  .who-we-are-content .left-side {
+    width: 48%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -36,9 +35,12 @@
     margin-bottom: 15px;
   }
   
-  .right-side {
+  .who-we-are-content .right-side {
     position: relative;
-    width: 50%;
+    width: 48%;
+  }
+  .who-we-are-content p{
+    line-height: 1.8;
   }
   
   .background {
@@ -53,7 +55,7 @@
     top: -28px;
     left: 31px;
     width: 100%;
-    background-color: rgba(255, 0, 0, 0.304);
+    background-color:#DC0000;
     height: 100%;
     z-index: -1;
   }

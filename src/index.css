@@ -38,4 +38,4 @@ table {border-collapse: collapse; border-spacing: 0;}
   color:var(--primary-color);
 }
 
-.wrapper{width: 94%; max-width: 1320px; margin: 0 auto 0;}
+.wrapper{width: 100%; max-width: 1320px; margin: 0 auto 0;}

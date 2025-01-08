@@ -1,0 +1,35 @@
+.product-des{
+    padding: 60px 0px 100px;
+    background-color: #F2F2F2;
+}
+.product-des-head h2{
+    font-size: 2rem;
+    font-family: 'Inter';
+    margin-bottom: 20px;
+}
+.product-des-head h2 span{
+    font-weight: 700;
+    color:#DC0000;
+    border-bottom: 5px solid #DC0000;
+}
+.product-des-head h3{
+    font-size: 1.5rem;
+    color: #DC0000;
+}
+.product-des-para{
+    margin-top: 30px;
+}
+.filter-sec{
+    margin-top: 50px;
+}
+.filter-sec p{
+    margin-bottom: 20px;
+}
+.product-filter{
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
