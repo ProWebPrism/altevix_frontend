@@ -1,7 +1,7 @@
 .carouselContainer {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
 }
 
@@ -23,15 +23,17 @@
 }
 
 .content {
-  position: relative;
+  position:absolute;
   z-index: 2;
   color: white;
-  max-width: 800px;
+  max-width: 1000px;
   padding: 100px 0px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .title {
-  font-size: 3.5rem;
+  font-size: 5rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -46,17 +48,20 @@
 .button {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: #dc2626;
+  background-color: #DC0000;
   color: white;
   border: none;
   border-radius: 0.25rem;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition:0.3s all ease-in-out;
+  border: 2px solid #DC0000;  
 }
 
 .button:hover {
-  background-color: #b91c1c;
+  background-color:transparent;
+  color: #fff;
+  border: 2px solid #fff;
 }
 
 .pagination {
@@ -80,13 +85,13 @@
 
 .paginationArrowUp {
   composes: paginationArrow;
-  border-bottom: 12px solid #dc2626;
+  border-bottom: 12px solid #DC0000;
   margin-bottom: 0.5rem;
 }
 
 .paginationArrowDown {
   composes: paginationArrow;
-  border-top: 12px solid #dc2626;
+  border-top: 12px solid #DC0000;
   margin-top: 0.5rem;
 }
 
@@ -105,8 +110,8 @@
 }
 
 .paginationDot.active {
-  background: #dc2626;
-  border-color: #dc2626;
+  background: #DC0000;
+  border-color: #DC0000;
 }
 
 .overlay {

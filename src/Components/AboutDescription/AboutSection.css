@@ -29,13 +29,9 @@
     margin: 0;
     color: #000;
     position: relative;
+    border-bottom: 5px solid #DC0000;
   }
-  
-  .brand-underline {
-    width: 140px;
-    height: 4px;
-    background-color: #e30613; /* Red color */
-  }
+
   
   /* Right Side: Text and Button */
   .right-side {
@@ -44,34 +40,34 @@
   }
   
   .tagline {
-    font-size: medium;
-    color: #e30613; 
+    font-size: 1.8rem;
+    color: #DC0000; 
     margin-bottom: 16px;
   }
   
   .description {
-    font-size: 1rem;
+    font-size: 2rem;
     line-height: 1.6;
     color: #333;
     margin-bottom: 20px;
-    font-size: small;
   }
   
   .about-btn {
     padding: 10px 20px;
-    background-color: #e30613; 
+    background-color: #DC0000; 
     color: #fff;
     border: none;
     border-radius: 4px;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    border: solid #DC0000 1px;
   }
   
   .about-btn:hover {
-    background-color: #ffffff; 
-    border: solid #e30613 1px;
-    color: #e30613;
+    background-color:transparent; 
+    border: solid #DC0000 1px;
+    color: #DC0000;
   }
   
   /* Responsive Design */
