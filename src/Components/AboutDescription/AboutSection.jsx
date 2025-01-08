@@ -9,7 +9,6 @@ const AboutSection = () => {
           {/* Left Side: Brand Name */}
           <div className="left-side">
             <h1 className="brand-name">Altivex</h1>
-            <div className="brand-underline"></div>
           </div>
 
           {/* Right Side: Text and Button */}
