@@ -20,19 +20,7 @@ const Dropdown = () => {
         {selectedOption}
       </button>
       {isOpen && (
-        <ul
-          style={{
-            listStyle: 'none',
-            margin: 0,
-            padding: 0,
-            position: 'absolute',
-            backgroundColor: '#fff',
-            boxShadow: '0 2px 5px rgba(0, 0, 0, 0.15)',
-            borderRadius: '4px',
-            overflow: 'hidden',
-            zIndex: 10,
-          }}
-        >
+        <ul className='menuitems'>
           {options.map((option, index) => (
             <li
               key={index}

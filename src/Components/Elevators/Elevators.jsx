@@ -8,7 +8,7 @@ const OurElevators = () => {
       title: "Passenger Elevators",
       description:
         "As a leading elevator company, we've engineered our passenger elevators for various building applications, including residential, commercial, and public transit.",
-      image: elevator, 
+      image: elevator,
     },
     {
       title: "Car Lift",
@@ -34,7 +34,7 @@ const OurElevators = () => {
     <section className="our-elevators">
       <div className="wrapper">
         <h2 className="section-title">
-          OUR <span className="highlight">ELEVATORS</span> 
+          OUR <span className="highlight">ELEVATORS</span>
         </h2>
         <p className="section-description">
           Always innovating, our wide range of elevators covers the most diverse needs, so that our clients can adapt to an increasingly changing and competitive world.
