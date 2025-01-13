@@ -7,11 +7,7 @@ const AboutBanner = () => {
         <div className="wrapper">
             <div className="about-content">
             <h1>About Altivex</h1>
-
             </div>
-            
-        
-
         </div>
     </div>
   )

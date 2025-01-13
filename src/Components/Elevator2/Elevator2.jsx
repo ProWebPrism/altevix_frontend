@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { ChevronLeft, ChevronRight, CircleArrowLeft, CircleArrowRight, Play  } from 'lucide-react'
 import './Elevator2.css'
-import elevator from '../../assets/images/elevators.jpg'
+import elevator from '../../assets/images/liftsample.png'
 import left from '../../assets/images/left.png'
 import right from '../../assets/images/right.png'
 
 export default function ElevatorDisplay() {
-  const itemsPerPage = 3
+  const itemsPerPage = 4
   const [currentPage, setCurrentPage] = useState(1)
 
   
@@ -30,7 +30,7 @@ export default function ElevatorDisplay() {
               alt={`Elevator ${elavator.id}`}
               className="elevator2-image"
             />
-            <div className="elevator2-title">
+            <div className="lift-name">
               <h3>{elavator.title}</h3>
             </div>
           </div>
