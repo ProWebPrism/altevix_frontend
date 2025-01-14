@@ -1,0 +1,36 @@
+.customizedbox{
+    background-color: #fff;
+    width: 48%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    border: 1px solid #DC0000;
+}
+.customized-image{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+.customized-content{
+    margin-left: 10%;
+}
+.customized-content h3{
+    font-size: 1.5rem;
+    color:#DC0000;
+    font-weight: 600;
+}
+.customized-content h4{
+    font-size: 1.2rem;
+}
+.customized-content ul{
+    margin-top: 20px;
+}
+.customized-content ul li{
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+}
+.customized-head{
+    border-bottom: 2px solid #DC0000;
+}
