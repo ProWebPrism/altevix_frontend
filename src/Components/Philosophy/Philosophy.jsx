@@ -2,7 +2,7 @@ import React from 'react'
 import './Philosophy.css'
 import img from '../../assets/images/contactsection.png'
 
-const Philosophy = () => {
+const Philosophy = ({ description, image }) => {
   return (
         <div className="who-we-are">
           <div className="wrapper">
@@ -12,19 +12,13 @@ const Philosophy = () => {
                   OUR <span>PHILOSOPHY</span>
                 </h3>
                 <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.  
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book
-
-                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has 
-                 been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-                  a galley of type and scrambled it to make a type specimen book
+                {description}
                 </p>
               </div>
               <div className="right-side">
                 <div className="background">
                   <img
-                    src={img}
+                    src={`http://localhost:5000${image}`}
                     alt="Decorative"
                     className="decorative-image"
                   />
