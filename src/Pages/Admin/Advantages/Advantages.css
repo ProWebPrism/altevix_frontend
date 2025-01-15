@@ -1,0 +1,51 @@
+.advantages-section-update {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .advantages-section-update h2 {
+    font-size: 2rem;
+    color: #d32f2f;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .carousel-form {
+    margin-bottom: 20px;
+  }
+  
+  .carousel-form h3 {
+    color: #d32f2f;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .carousel-form input[type="file"] {
+    margin-bottom: 10px;
+  }
+  
+  .carousel-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  .carouselupdate {
+    background-color: #d32f2f;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .carouselupdate:hover {
+    background-color: #b71c1c;
+  }
+  

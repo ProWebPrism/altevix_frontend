@@ -5,10 +5,12 @@
 .custom-made-section button {
     background-color: white;
     color: #dc0000;
-    padding: 10px 20px;
-    border: none;
+    padding: 10px 30px;
+    border: solid #dc0000 1px;
     border-radius: 5px;
     cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.9rem;
 }
 .custom-made-section button:hover {
     background-color: transparent;
@@ -28,12 +30,13 @@
 }
 .section-content {
     display: flex;
+    align-items: center;
 }
 .right-side {
     padding: 20px 40px;
 }
 .right-side h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 25px;
     text-align: left;
     width: fit-content;
@@ -44,6 +47,7 @@
 }
 .right-side p {
     margin-bottom: 20px;
+    font-size: 1.1rem;
 }
 @media (max-width: 768px) {
     .section-content {

@@ -1,50 +1,48 @@
-import React from "react";
+import React, { useState, useEffect} from "react";
 import "./Elevators.css";
 import elevator from '../../assets/images/elevators.jpg'
+import apiClient from "../../API/api";
 
 const OurElevators = () => {
-  const elevators = [
-    {
-      title: "Passenger Elevators",
-      description:
-        "As a leading elevator company, we've engineered our passenger elevators for various building applications, including residential, commercial, and public transit.",
-      image: elevator, 
-    },
-    {
-      title: "Car Lift",
-      description:
-        "Our car lifts are designed to meet diverse parking needs, offering exceptional efficiency and reliability for commercial and residential use.",
-      image: elevator,
-    },
-    {
-      title: "Single-family Homes",
-      description:
-        "Elevators for single-family homes, combining style and practicality for a convenient living experience.",
-      image: elevator,
-    },
-    {
-      title: "Stair Lift",
-      description:
-        "Our stair lifts ensure accessibility and safety, engineered for homes and public spaces alike.",
-      image: elevator,
-    },
-  ];
+const [elevators, setElevators] = useState({
+        description: '',
+        cards: [{ image: null, title: '', description: '' },
+             { image: null, title: '', description: '' },
+              { image: null, title: '', description: '' },
+               { image: null, title: '', description: '' }]
+      });
+      useEffect(() => {
+        const fetchCardSection = async () => {
+            try {
+                const response = await apiClient.get('/section/cards');
+                setElevators({
+                    description: response.data.description || '',
+                    cards: response.data.cards || [{ image: null, title: '', description: '' }, { image: null, title: '', description: '' }, { image: null, title: '', description: '' }, { image: null, title: '', description: '' }]
+                });
+            } catch (error) {
+                console.error('Error fetching card section data:', error);
+                alert('Failed to fetch card section data.');
+            }
+        };
+
+        fetchCardSection();
+    }, []);
 
   return (
     <section className="our-elevators">
       <div className="wrapper">
         <h2 className="section-title">
-          OUR <span className="highlight">ELEVATORS</span> 
+          OUR <span className="highlight">ELEVATORS</span>
         </h2>
         <p className="section-description">
-          Always innovating, our wide range of elevators covers the most diverse needs, so that our clients can adapt to an increasingly changing and competitive world.
+          {elevators.description}
         </p>
 
         <div className="elevator-grid">
-          {elevators.map((elevator, index) => (
+          {elevators.cards.map((elevator, index) => (
             <div className="elevator-card" key={index}>
               <img
-                src={elevator.image}
+                src={`http://localhost:5000${elevator.image}`}
                 alt={elevator.title}
                 className="elevator-image"
               />

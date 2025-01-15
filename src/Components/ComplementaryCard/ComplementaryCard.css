@@ -1,0 +1,38 @@
+.Complementary-card{
+    width: 48%;
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.Complementary-image{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    border-left: 80px solid #fff;
+}
+.Complementary-image img{
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+}
+.Complementary-name{
+    font-size: 1.8rem;
+    color: #DC0000;
+    text-transform: uppercase;
+    position: absolute;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+    width:100%;
+    padding: 20px 0px;
+    left: -14%;
+    bottom: -10%;
+    font-weight: 600;
+}

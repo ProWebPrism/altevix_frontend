@@ -1,22 +1,40 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import apiClient from '../../API/api'
 import custom from '../../assets/images/custom.jpg'
 import './CustomMadeSection.css'
 
 const CustomMadeSection = () => {
+    const [image, setImage] = useState(null);
+    const [description, setDescription] = useState('');
+    const navigate = useNavigate()
+  
+    useEffect(() => {
+          const fetchCustom = async () => {
+              try {
+                  const response = await apiClient.get('/section/custom')
+                  if(response) {
+                      setDescription(response.data.description)
+                      setImage(response.data.image)
+                  }
+              } catch (error) {
+                  console.error(error);
+                  
+              }
+          }
+          fetchCustom()
+      },[])
     return (
         <div className='custom-made-section'>
             <div className="wrapper">
                 <div className="section-content">
                 <div className="left-side">
-                    <img src={custom} alt="" />
+                    <img src={`http://localhost:5000/${image}`} alt="" />
                 </div>
                 <div className="right-side">
                     <h3>SOLUTIONS <span className='highlight'>CUSTOM MADE</span></h3>
-                    <p>We are specialists in developing specific projects tailored to the special needs of our clients.
-                        We also specialize in elevators in existing buildings with extreme heights.We are specialists in
-                        developing specific projects tailored to the special needs of our clients. We also specialize in
-                        elevators in existing buildings with extreme heights.</p>
-                    <button>About us</button>
+                    <p>{description}</p>
+                    <button onClick={() => navigate('/about-us')}>About us</button>
                 </div>
 
                 </div>

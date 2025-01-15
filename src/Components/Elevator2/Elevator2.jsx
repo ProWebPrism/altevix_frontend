@@ -1,12 +1,44 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, CircleArrowLeft, CircleArrowRight, Play  } from 'lucide-react'
 import './Elevator2.css'
-import elevator from '../../assets/images/elevators.jpg'
+import apiClient from '../../API/api'
+import elevator from '../../assets/images/liftsample.png'
 import left from '../../assets/images/left.png'
 import right from '../../assets/images/right.png'
 
 export default function ElevatorDisplay() {
-  const itemsPerPage = 3
+  const [cards, setCards] = useState({
+    cards: [
+      { image: null, title: '' },
+      { image: null, title: '' },
+      { image: null, title: '' },
+      { image: null, title: '' },
+      { image: null, title: '' },
+      { image: null, title: '' },
+      { image: null, title: '' },
+      { image: null, title: '' },
+      { image: null, title: '' },
+      { image: null, title: '' },
+      { image: null, title: '' },
+      { image: null, title: '' }
+    ],
+  });
+  useEffect(() => {
+    const fetchCardSection = async () => {
+      try {
+        const response = await apiClient.get('/section/product-section');
+        setCards({
+          cards: response.data.cards 
+        });
+      } catch (error) {
+        console.error('Error fetching products section data:', error);
+        alert('Failed to fetch card products data.');
+      }
+    };
+
+    fetchCardSection();
+  }, []);
+  const itemsPerPage = 4
   const [currentPage, setCurrentPage] = useState(1)
 
   
@@ -18,7 +50,7 @@ export default function ElevatorDisplay() {
 
   const totalPages = Math.ceil(elevators.length / itemsPerPage)
   const startIndex = (currentPage - 1) * itemsPerPage
-  const visibleElevators = elevators.slice(startIndex, startIndex + itemsPerPage)
+  const visibleElevators = cards.cards.slice(startIndex, startIndex + itemsPerPage)
 
   return (
     <div className="elevato2r-container">
@@ -26,11 +58,11 @@ export default function ElevatorDisplay() {
         {visibleElevators.map((elavator) => (
           <div key={elevator.id} className="elevator2-card">
             <img
-              src={elavator.imageUrl}
+              src={`http://localhost:5000/${elavator.image}`}
               alt={`Elevator ${elavator.id}`}
               className="elevator2-image"
             />
-            <div className="elevator2-title">
+            <div className="lift-name">
               <h3>{elavator.title}</h3>
             </div>
           </div>

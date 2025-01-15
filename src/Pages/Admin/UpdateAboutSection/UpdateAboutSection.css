@@ -1,0 +1,114 @@
+/* UpdateAboutSection.css */
+.update-about-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .update-about-section h1 {
+    font-size: 2rem;
+    color: #d32f2f; /* Red */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .update-about-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f8f8f8; /* Light gray */
+  }
+  
+  .update-about-section label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .update-about-section input[type="text"],
+  .update-about-section textarea,
+  .update-about-section input[type="file"] {
+    padding: 10px;
+    border: 2px solid #d32f2f; /* Red border */
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    transition: border 0.3s ease;
+  }
+  
+  .update-about-section input[type="text"]:focus,
+  .update-about-section textarea:focus,
+  .update-about-section input[type="file"]:focus {
+    border-color: #b71c1c; /* Darker Red on focus */
+  }
+  
+  .update-about-section textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  
+  .update-about-section button {
+    padding: 12px 20px;
+    background-color: #d32f2f; /* Red background */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .update-about-section button:hover {
+    background-color: #b71c1c; /* Darker Red on hover */
+  }
+  
+  .update-about-section button:focus {
+    outline: none;
+  }
+  
+  .update-about-section button:active {
+    background-color: #9a1b1b; /* Even darker Red on active */
+  }
+  
+  /* File Input Styling */
+  .update-about-section input[type="file"] {
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
+  
+  .update-about-section input[type="file"]:hover {
+    background-color: #f8f8f8;
+  }
+  
+  .update-about-section input[type="file"]::file-selector-button {
+    background-color: #d32f2f; /* Red Button */
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+  }
+  
+  .update-about-section input[type="file"]::file-selector-button:hover {
+    background-color: #b71c1c; /* Darker Red on hover */
+  }
+  .update-about-section .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Add responsive styling */
+  @media (max-width: 768px) {
+    .update-about-section form {
+      padding: 10px;
+    }
+  
+    .update-about-section button {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  }
+  

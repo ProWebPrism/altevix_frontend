@@ -1,0 +1,26 @@
+.productcatagoery{
+    padding: 90px 0px 50px;
+}
+.productcatagoery-warpper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.Complementarycatagoery{
+    padding: 90px 0px 20px;
+    background-color: #F2F2F2;
+}
+.Complementarycatagoery-wrapper{
+    margin: 50px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Complementarycatagoery h2{
+    font-size: 2rem;
+    font-weight: 700;
+    color:#DC0000;
+    border-bottom: 5px solid #DC0000;
+    max-width: fit-content;
+}

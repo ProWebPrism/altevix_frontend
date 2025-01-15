@@ -1,0 +1,29 @@
+.breadcrumps-wrap{
+    margin: 30px 0px;
+}
+.breadcrump-list{
+    display: inline-flex;
+    max-width:fit-content;
+}
+.breadcrump-list li{
+   padding-right: 30px;
+   position: relative;
+}
+.breadcrump-list li::after{
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    display: inline-block;
+    padding: 3px; 
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+.breadcrump-list li:last-child::after{
+    content: none;
+}
+.breadcrump-list li.active{
+    color: #DC0000;
+}
