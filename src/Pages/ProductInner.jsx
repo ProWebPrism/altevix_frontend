@@ -5,7 +5,13 @@ import Contact from '../Components/ContactSection/ContactSection'
 import Footer from '../Components/Footer/Footer'
 import BreadCrumps from '../Components/BreadCrumps/BreadCrumps'
 import ProductDetailImage from '../assets/images/symbio.jpg'
+import liftblueprint1 from '../assets/images/bluprint-1.png'
+import liftblueprint2 from '../assets/images/bluprint-2.png'
+import TechnicalBox from '../Components/TechnicalBox/TechnicalBox'
+import CustomizedBox from '../Components/CustomizedBox/CustomizedBox'
 import './ProductInner.css'
+
+
 
 const ProductInner = () => {
   return (
@@ -26,19 +32,19 @@ const ProductInner = () => {
               <h2>Advantages</h2>
               <div className="product-detail-points">
                 <div className="product-detail-card">
-                  <h3>High efficiency machine</h3>
+                  <h3>Versatile</h3>
                   <p>Rest assured. Our high efficiency permanent magnet machines meet our legendary engineering and quality control standards. You can count on smooth reliable performance and great passenger experiences for years to come.</p>
                 </div>
                 <div className="product-detail-card">
-                  <h3>High efficiency machine</h3>
+                  <h3>Flexibility / Adaptability</h3>
                   <p>Rest assured. Our high efficiency permanent magnet machines meet our legendary engineering and quality control standards. You can count on smooth reliable performance and great passenger experiences for years to come.</p>
                 </div>
                 <div className="product-detail-card">
-                  <h3>High efficiency machine</h3>
+                  <h3>Comfort</h3>
                   <p>Rest assured. Our high efficiency permanent magnet machines meet our legendary engineering and quality control standards. You can count on smooth reliable performance and great passenger experiences for years to come.</p>
                 </div>
                 <div className="product-detail-card">
-                  <h3>High efficiency machine</h3>
+                  <h3>Great durability</h3>
                   <p>Rest assured. Our high efficiency permanent magnet machines meet our legendary engineering and quality control standards. You can count on smooth reliable performance and great passenger experiences for years to come.</p>
                 </div>
               </div>
@@ -59,11 +65,58 @@ const ProductInner = () => {
         <div className="wrapper">
           <div className="product-appliction-wrapp">
             <div className="product-appliction-col1">
-              
+            <img
+                  src={liftblueprint1}
+                  alt="Decorative"
+                  className="decorative-image"
+                />
             </div>
             <div className="product-appliction-col2">
-              
+            <img
+                  src={liftblueprint2}
+                  alt="Decorative"
+                  className="decorative-image"
+                />
             </div>
+            <div className="product-appliction-col3">
+                <div className="appliction-list">
+                  <h3>Applictions</h3>
+                  <ol>
+                    <li>Residential building</li>
+                    <li>Shopping centres</li>
+                    <li>Hotels</li>
+                    <li>Hospitals</li>
+                    <li>Offices</li>
+                    <li>Bedlifts</li>
+                    <li>High rise installations</li>
+                  </ol>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="techincal-specialty">
+        <div className="wrapper">
+          <h2>Technical Features</h2>
+          <div className="techincalspecialties-row">
+              <TechnicalBox/>
+              <TechnicalBox/>
+              <TechnicalBox/>
+              <TechnicalBox/>
+              <TechnicalBox/>
+          </div>
+        </div>
+      </div>
+      <div className="customazied-sec">
+        <div className="wrapper">
+          <div className="customazied-head">
+            <h2>Customised solutions</h2>
+          </div>
+          <div className="customazied-products">
+            <CustomizedBox/>
+            <CustomizedBox/>
+            <CustomizedBox/>
+            <CustomizedBox/>
           </div>
         </div>
       </div>

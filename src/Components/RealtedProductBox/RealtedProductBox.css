@@ -1,0 +1,24 @@
+.related-card{
+    background-color: #fff;
+    width: 24%;
+    border-radius: 10px;
+    border: 1px solid #DC0000;
+}
+.related-product-image{
+    padding: 20px;
+}
+.related-product-card-content{
+    background-color: #DC0000;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+.related-product-card-content h3{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.related-product-card-content p{
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 20px;
+}

@@ -1,0 +1,104 @@
+.contact-wrap{
+    background-color: #F2F2F2;
+}
+.contact-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact-col-1{
+    width: 48%;
+}
+.contact-col-2{
+    width: 48%;
+    background-color:#ffffff;
+    padding: 50px;
+}
+.contact-wrap{
+    padding: 50px 0px;
+}
+.contact-page-form{
+    margin: 0 auto;
+    background-color: #DC0000 ;
+    padding: 50px 30px 50px;
+    color: #fff;
+}
+
+.contact-page-form h3{
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 600;
+    border-bottom: 2px solid #ffffff;
+    max-width: fit-content;
+    margin-bottom: 30px;
+}
+.contact-page-form .contact-form{
+    background-color: #DC0000;
+    border-radius: 30px; 
+}
+.contact-page-form .contact-form input{
+    margin-bottom: 30px;
+    border-bottom:1px solid #ffffff;
+    height: 40px;
+    background-color: #DC0000 !important;
+    color: #fff;
+}
+.contact-page-form .contact-form input::placeholder {
+    color: #ffffff;
+}
+.contact-form  button.login-btn{
+    margin-top: 30px;
+    padding: 10px 30px;
+    color:#DC0000;
+    background-color: #ffffff;
+    max-width: fit-content;
+    border: #ffffff 1px solid;
+    border-radius: 7px;
+    font-size: medium;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.contact-form  button.login-btn:hover{
+    background-color: #DC0000;
+    border-color: #fff;
+    color: #fff;
+}
+.location{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.location a{
+    margin-left: 20px;
+    font-size: 1.2rem;
+    color: #000000;
+    font-weight: 500;
+}
+.call{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.call a{
+    margin-left: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000000;
+}
+.mail{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.mail a{
+    margin-left: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000000;
+}
+.contact-col-2 img{
+    height: 30px;
+    width: 30px;
+    object-fit: contain;
+}

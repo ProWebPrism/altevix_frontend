@@ -17,7 +17,7 @@
 }
 .footer-content ul li{
     font-size: 1rem;
-    margin: 10px 0px;
+    margin: 20px 0px;
 }
 /*
 .elevators {
@@ -42,16 +42,25 @@
     justify-content: space-between;
     padding: 20px 0px;
 }
-.footer-bottom ul {
+.footer-bottom-links {
     display: flex;
     align-items: center;
     color: white;
-    justify-content: space-between;
-    width: 50%;
+    width: 80%;
+}
+.footer-bottom-links li{
+    margin-right: 5%;
 }
 .footer-bottom .social-icons {
     color: white;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 .footer-bottom .social-icons a:hover {
     color: #848181;
+}
+.footer-content .contact ul li span{
+    margin-left: 20px;
 }
