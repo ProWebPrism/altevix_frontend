@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './AboutSection.css';
 
 const AboutSection = () => {
+  const navigate = useNavigate()
   return (
     <section className="about-section">
       <div className="wrapper">
@@ -19,7 +21,7 @@ const AboutSection = () => {
             <p className="description">
             We move 2.3 billion people a day and we maintain ~2.3 million customer units worldwide - the world’s largest portfolio. We can be found in many of the world’s most recognizable buildings as well as the busiest transportation hubs and retail centers. We are everywhere people are on the move.recognizable buildings as well as the busiest transportation hubs and retail centers. We are everywhere people are on the move.recognizable buildings as well as the busiest transportation hubs and retail centers. We are everywhere people are on the move.
             </p>
-            <button className="about-btn">About Us</button>
+            <button className="about-btn" onClick={() => navigate('/about-us')}>About Us</button>
           </div>
         </div>
       </div>

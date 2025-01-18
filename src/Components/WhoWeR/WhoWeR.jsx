@@ -2,7 +2,7 @@ import React from 'react';
 import './WhoWeR.css';
 import img from '../../assets/images/contactsection.png'
 
-const WhoWeR = () => {
+const WhoWeR = ({ subheading, description, image }) => {
   return (
     <div className="who-we-are">
       <div className="wrapper">
@@ -11,19 +11,15 @@ const WhoWeR = () => {
             <h3>
               WHO <span>WE ARE</span>
             </h3>
-            <h5>We are a reference company in the lifting sector</h5>
+            <h5>{subheading}</h5>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book Lorem Ipsum <br/> <br />is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
-              an unknown printer took a galley of type and scrambled it to make a type specimen book
+              {description}
             </p>
           </div>
           <div className="right-side">
             <div className="background">
               <img
-                src={img}
+                src={`http://localhost:5000${image}`}
                 alt="Decorative"
                 className="decorative-image"
               />
