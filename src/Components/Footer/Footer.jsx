@@ -28,13 +28,13 @@ const Footer = () => {
                     </div>
                     <div className="elevators">
                         <h5>Elevators</h5>
-                        <li>Passenger Elevators</li>
-                        <li>Lift</li>
-                        <li>Car lift</li>
-                        <li>Single-family homes</li>
-                        <li>Stair lift</li>
-
-
+                        <ul>
+                            <li>Passenger Elevators</li>
+                            <li>Lift</li>
+                            <li>Car lift</li>
+                            <li>Single-family homes</li>
+                            <li>Stair lift</li>
+                        </ul>
                     </div>
                     <div className="contact">
                         <h5>Contact</h5>

@@ -6,7 +6,6 @@ const ContactSection = () => {
     return (
         <div className='contact-section'>
             <div className="wrapper">
-
                 <div className="left-section">
                     <h3 className='brand-name'>Altivex</h3>
 
