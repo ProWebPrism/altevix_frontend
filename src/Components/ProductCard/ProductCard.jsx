@@ -2,18 +2,18 @@ import React from 'react';
 import "./ProductCard.css"
 import ProductCardimg from '../../assets/images/about-banner.png'
 
-function ProductCard() {
+function ProductCard({ card }) {
   return (
     <div className='product-card'>
         <div className="product-image">
              <img
-                src={ProductCardimg}
+                src={`http://localhost:5000/${card.image}`}
                 alt="Decorative"
                 className="decorative-image"
             />
         </div>
         <div className="product-name">
-            <h3>lift</h3>
+            <h3>{card.title}</h3>
         </div>
     </div>
   )

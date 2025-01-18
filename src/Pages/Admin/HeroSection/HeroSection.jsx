@@ -58,7 +58,7 @@ const HeroSectionUpdate = () => {
 
   return (
     <div className="hero-section-update">
-      <h2>Update Hero Section</h2>
+      <h2>Update Slider Section</h2>
       <form onSubmit={handleSubmit}>
         {carousels.map((carousel, index) => (
           <div key={index} className="carousel-form">
@@ -83,7 +83,7 @@ const HeroSectionUpdate = () => {
             />
           </div>
         ))}
-        <button className='carouselupdate' type="submit">Update Hero Section</button>
+        <button className='carouselupdate' type="submit">Update Slider Section</button>
       </form>
     </div>
   );
