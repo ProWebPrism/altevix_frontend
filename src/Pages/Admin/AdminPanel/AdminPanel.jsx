@@ -9,6 +9,7 @@ import UpdateStoreSection from '../StoreSection/StoreSection';
 import ProductSectionUpdate from '../ProductSection/PoductSection';
 import UpdateAboutSection from '../UpdateAboutSection/UpdateAboutSection';
 import ProductPage from '../ProductPage/ProductPage'
+import UpdateContactDetails from '../ContactPage/ContactPage';
 
 const AdminPanel = () => {
   return (
@@ -43,6 +44,9 @@ const AdminPanel = () => {
             <li>
               <Link to="/admin/product">Update Product Page</Link>
             </li>
+            <li>
+              <Link to="/admin/contact">Update Contact Page</Link>
+            </li>
             {/* Add other navigation links if needed */}
           </ul>
         </nav>
@@ -57,6 +61,7 @@ const AdminPanel = () => {
           <Route path="product-section" element={<ProductSectionUpdate />} />
           <Route path="about" element={<UpdateAboutSection />} />
           <Route path="product" element={<ProductPage />} />
+          <Route path="contact" element={<UpdateContactDetails />} />
           {/* Add other routes as needed */}
         </Routes>
       </main>
