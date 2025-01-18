@@ -6,6 +6,8 @@ import ProductInner from "./Pages/ProductInner"
 import SubProduct from "./Pages/SubProduct"
 import LoginPage from "./Pages/LoginPage"
 import RegistrationPage from "./Pages/RegistrationPage"
+import ProfilePage from "./Pages/ProfilePage"
+import ContactPage from "./Pages/ContactPage"
 
 
 function App() {
@@ -22,7 +24,8 @@ function App() {
         <Route path="/subproductinner" element={<SubProduct/>}/>
         <Route path="/login-page" element={<LoginPage/>}/>
         <Route path="/registration-page" element={<RegistrationPage/>}/>
-        <Route path="/Profile-page" element={<RegistrationPage/>}/>
+        <Route path="/Profile-page" element={<ProfilePage/>}/>
+        <Route path="/contact-us" element={<ContactPage/>}/>
       </Routes>
     </Router>
       

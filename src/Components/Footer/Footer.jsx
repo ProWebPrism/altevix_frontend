@@ -1,7 +1,8 @@
 import React from 'react'
 import './Footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faXTwitter, faLinkedinIn, faWhatsapp, } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faXTwitter, faLinkedinIn, faWhatsapp} from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faLocationDot, faPhone} from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
     return (
@@ -38,6 +39,14 @@ const Footer = () => {
                     </div>
                     <div className="contact">
                         <h5>Contact</h5>
+                        <ul>
+                            <li><FontAwesomeIcon icon={faLocationDot} size="lg"/>
+                            <span>Umm Al quiwan , United Arab Emirates</span></li>
+                            <li><FontAwesomeIcon icon={faPhone} size="lg"/>
+                            <span>0566539382</span></li>
+                            <li> <FontAwesomeIcon icon={faEnvelope}  size="lg"/>
+                            <span>info@altivixme.com</span></li>
+                        </ul>
                     </div>
 
                 </div>
@@ -45,11 +54,12 @@ const Footer = () => {
             </div>
             <div className="footer-bottom">
                 <div className="wrapper footer-bottom-content ">
-                    <ul>
-                        <li>Legal notice</li>
+                    <ul className='footer-bottom-links'>
+                        {/* <li>Legal notice</li> */}
                         <li>Privacy policy</li>
                         <li>Cookies policy</li>
-                        <li>Quality policy</li>
+                        {/* <li>Quality policy</li> */}
+                        <li>Copyright © 2025 Altivex Elevator Industry all rights reserved.</li>
                     </ul>
                     <div className="social-icons">
                         <a href="#">
