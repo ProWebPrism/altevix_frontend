@@ -1,17 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import './LoginPage.css';
-import apiClient from '../API/api';
+import './Login.css';
+import apiClient from '../../../API/api';
 
-function LoginPage() {
-  useEffect(() => {
-    
-  })
+function AdminLogin() {
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
   const [formErrors, setFormErrors] = useState({});
   const navigate = useNavigate();
+  
+  useEffect(() => {
+    const token = localStorage.getItem('admintoken')
+    if(token) {
+        navigate('/admin')
+    }
+  })
 
   const validateForm = () => {
     const errors = {};
@@ -41,12 +46,12 @@ function LoginPage() {
     }
 
     try {
-      const response = await apiClient.post('/auth/login', { email, password });
+      const response = await apiClient.post('/admin/login', { email, password });
 
       if (response.data) {
-        localStorage.setItem('token', response.data.token);
+        localStorage.setItem('admintoken', response.data.token);
         alert('Login successful!');
-        navigate('/'); // Redirect to home page
+        navigate('/admin'); // Redirect to home page
       }
     } catch (error) {
       console.error(error);
@@ -88,4 +93,4 @@ function LoginPage() {
   );
 }
 
-export default LoginPage;
+export default AdminLogin;

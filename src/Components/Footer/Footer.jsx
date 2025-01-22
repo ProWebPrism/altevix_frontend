@@ -1,11 +1,26 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './Footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faXTwitter, faLinkedinIn, faWhatsapp} from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faLocationDot, faPhone} from '@fortawesome/free-solid-svg-icons';
+import apiClient from '../../API/api';
 
 const Footer = () => {
+    const [contactDetails, setContactDetails] = useState(null);
+    useEffect(() => {
+        const fetchContactDetails = async () => {
+          try {
+            const response = await apiClient.get('/contact-page');
+            setContactDetails(response.data);
+          } catch (error) {
+            console.error(error);
+          }
+        };
+    
+        fetchContactDetails();
+      }, []);
     return (
+    <> { contactDetails && (
         <div className='footer-section'>
             <div className="wrapper">
                 <div className="footer-content">
@@ -41,11 +56,11 @@ const Footer = () => {
                         <h5>Contact</h5>
                         <ul>
                             <li><FontAwesomeIcon icon={faLocationDot} size="lg"/>
-                            <span>Umm Al quiwan , United Arab Emirates</span></li>
+                            <span>{contactDetails.location}</span></li>
                             <li><FontAwesomeIcon icon={faPhone} size="lg"/>
-                            <span>0566539382</span></li>
+                            <span>{contactDetails.phone}</span></li>
                             <li> <FontAwesomeIcon icon={faEnvelope}  size="lg"/>
-                            <span>info@altivixme.com</span></li>
+                            <span>{contactDetails.email}</span></li>
                         </ul>
                     </div>
 
@@ -79,6 +94,9 @@ const Footer = () => {
             </div>
 
         </div>
+    )}
+        
+        </>
     )
 }
 

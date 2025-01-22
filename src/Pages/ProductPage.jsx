@@ -9,6 +9,8 @@ import apiClient from '../API/api'
 import './ProductPage.css'
 import PasssengerElevators from '../Components/PassengerElevator/PassengerElevators'
 import ProductBanner from '../Components/ProductBanner/ProductBanner'
+import GoogleMeet from '../Components/GoogleMeet/GoogleMeet'
+
 
 const ProductPage = () => {
   const [productPageData, setProductPageData] = useState(null)
@@ -52,6 +54,7 @@ const ProductPage = () => {
             </div>
           </div>
           <Contact />
+          <GoogleMeet/>
           <Footer />
         </>
       ) : (

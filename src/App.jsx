@@ -11,6 +11,7 @@ import LoginPage from "./Pages/LoginPage"
 import RegistrationPage from "./Pages/RegistrationPage"
 import ProfilePage from "./Pages/ProfilePage"
 import ContactPage from "./Pages/ContactPage"
+import AdminLogin from "./Pages/Admin/Login/Login"
 
 
 
@@ -33,6 +34,8 @@ function App() {
         <Route path="/registration-page" element={<RegistrationPage/>}/>
         <Route path="/Profile-page" element={<ProfilePage/>}/>
         <Route path="/contact-us" element={<ContactPage/>}/>
+        <Route path="/contact-us" element={<ContactPage/>}/>
+        <Route path="/admin-login" element={<AdminLogin/>}/>
 
       </Routes>
     </Router>
