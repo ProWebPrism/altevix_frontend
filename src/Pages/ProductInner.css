@@ -168,3 +168,26 @@
 .customazied-content{
     margin: 50px 0px;
 }
+.add-to-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#F2F2F2
+}
+.add-to-cart button {
+    cursor: pointer;
+    width: 20%;
+    background-color: #DC0000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 10px;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+.add-to-cart button:hover {
+    background-color: white;
+    color: #DC0000;
+    border: #DC0000 solid 2px;
+}
+

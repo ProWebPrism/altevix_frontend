@@ -1,0 +1,124 @@
+.manage-categories {
+    padding: 20px;
+    background-color: white;
+    color: red;
+    font-family: Arial, sans-serif;
+  }
+  
+  .manage-categories h1 {
+    text-align: center;
+    color: red;
+  }
+  
+  .category-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .category-form input[type="text"],
+  .category-form input[type="file"] {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 5px;
+    width: 300px;
+  }
+  
+  .category-form button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .category-form button:hover {
+    background-color: darkred;
+  }
+  
+  .category-form button.cancel-button {
+    background-color: grey;
+    color: white;
+    margin-left: 10px;
+  }
+  
+  .category-form button.cancel-button:hover {
+    background-color: darkgrey;
+  }
+  
+  .categories-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .category-card {
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    background-color: white;
+  }
+  
+  .category-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .category-card h2 {
+    margin: 10px 0;
+    color: red;
+  }
+  
+  .category-card button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .category-card button:hover {
+    background-color: darkred;
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .success-message {
+    color: green;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Highlight Edit Mode */
+  .edit-mode {
+    border: 2px dashed red;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #ffecec;
+  }
+  
+  .edit-mode h2 {
+    color: darkred;
+  }
+  
+  .edit-mode .category-form button {
+    background-color: orange;
+  }
+  
+  .edit-mode .category-form button:hover {
+    background-color: darkorange;
+  }
+  

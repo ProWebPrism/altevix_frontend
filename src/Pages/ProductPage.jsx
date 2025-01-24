@@ -1,19 +1,22 @@
-import React, { useEffect, useState } from 'react'
-import Navbar from '../Components/Navbar/Navbar'
-import ProductDescription from '../Components/ProductDescription/ProductDescription'
-import Contact from '../Components/ContactSection/ContactSection'
-import Footer from '../Components/Footer/Footer'
-import ProductCard from '../Components/ProductCard/ProductCard'
-import ComplementaryCard from '../Components/ComplementaryCard/ComplementaryCard'
-import apiClient from '../API/api'
-import './ProductPage.css'
-import PasssengerElevators from '../Components/PassengerElevator/PassengerElevators'
-import ProductBanner from '../Components/ProductBanner/ProductBanner'
-import GoogleMeet from '../Components/GoogleMeet/GoogleMeet'
-
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Navbar from '../Components/Navbar/Navbar';
+import ProductDescription from '../Components/ProductDescription/ProductDescription';
+import Contact from '../Components/ContactSection/ContactSection';
+import Footer from '../Components/Footer/Footer';
+import ProductCard from '../Components/ProductCard/ProductCard';
+import ComplementaryCard from '../Components/ComplementaryCard/ComplementaryCard';
+import apiClient from '../API/api';
+import './ProductPage.css';
+import PasssengerElevators from '../Components/PassengerElevator/PassengerElevators';
+import ProductBanner from '../Components/ProductBanner/ProductBanner';
+import GoogleMeet from '../Components/GoogleMeet/GoogleMeet';
 
 const ProductPage = () => {
-  const [productPageData, setProductPageData] = useState(null)
+  const [productPageData, setProductPageData] = useState(null);
+  const [categories, setCategories] = useState([]);
+  const navigate = useNavigate()
+
   useEffect(() => {
     const fetchProductPageData = async () => {
       try {
@@ -26,35 +29,53 @@ const ProductPage = () => {
 
     fetchProductPageData();
   }, []);
+
+  useEffect(() => {
+    fetchCategories();
+  }, []);
+
+  const fetchCategories = async () => {
+    try {
+      const response = await apiClient.get('/category'); // Replace with your endpoint
+      
+      setCategories(response.data);
+    } catch (err) {
+      console.error('Error fetching categories:', err);
+    }
+  };
+
   return (
     <>
-      {productPageData ? (
+      {productPageData && categories ? (
         <>
           <Navbar />
           <ProductBanner mainBanner={productPageData.banner.image} />
-          <ProductDescription description={productPageData.banner.description } subheading={productPageData.banner.subheading} />
-          <PasssengerElevators title={productPageData.sliderSection.mainTitle } slides={productPageData.sliderSection.cards} />
-          <div className="productcatagoery">
+          <ProductDescription description={productPageData.banner.description} subheading={productPageData.banner.subheading} />
+          <PasssengerElevators title={productPageData.sliderSection.mainTitle} slides={productPageData.sliderSection.cards} />
+          <div className="productcategory">
             <div className="wrapper">
-              <div className="productcatagoery-warpper">
-                <ProductCard card={productPageData.cardSection.cards[0]} />
-                <ProductCard card={productPageData.cardSection.cards[1]}/>
-                <ProductCard card={productPageData.cardSection.cards[2]}/>
-                <ProductCard card={productPageData.cardSection.cards[3]}/>
+              <div className="productcategory-wrapper">
+                {categories.map((category, index) => (
+                  <ProductCard
+                    key={index}
+                    category={category}
+
+                  />
+                ))}
               </div>
             </div>
           </div>
-          <div className="Complementarycatagoery">
+          <div className="Complementarycategory">
             <div className="wrapper">
-              <h2 className="section-tittle">COMPLEMENTARY</h2>
-              <div className="Complementarycatagoery-wrapper">
-                <ComplementaryCard card={productPageData.complimentary.cards[0]}/>
-                <ComplementaryCard card={productPageData.complimentary.cards[1]}/>
+              <h2 className="section-title">COMPLEMENTARY</h2>
+              <div className="Complementarycategory-wrapper">
+                <ComplementaryCard card={productPageData.complimentary.cards[0]} />
+                <ComplementaryCard card={productPageData.complimentary.cards[1]} />
               </div>
             </div>
           </div>
           <Contact />
-          <GoogleMeet/>
+          <GoogleMeet />
           <Footer />
         </>
       ) : (
@@ -62,6 +83,6 @@ const ProductPage = () => {
       )}
     </>
   );
-}
+};
 
-export default ProductPage
+export default ProductPage;

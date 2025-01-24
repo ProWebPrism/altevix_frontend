@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './AddProduct.css';
 import apiClient from '../../../API/api';
 
@@ -12,6 +12,21 @@ const ProductInformation = () => {
   const [applications, setApplications] = useState('');
   const [technicalFeatures, setTechnicalFeatures] = useState([{ title: '', feature: '' }]);
   const [solutions, setSolutions] = useState([{ image: '', title: '', subheading: '', features: '' }]);
+  const [categories, setCategories] = useState([])
+
+  useEffect(() => {
+    fetchCategories();
+  }, []);
+
+  const fetchCategories = async () => {
+    try {
+      const response = await apiClient.get('/category'); // Replace with your endpoint
+      
+      setCategories(response.data);
+    } catch (err) {
+      console.error('Error fetching categories:', err);
+    }
+  };
   
   const handleProductImageChange = (e) => {
     setProductImage(e.target.files[0]);
@@ -116,14 +131,19 @@ const ProductInformation = () => {
 
       <div className="form-group">
         <label htmlFor="category">Category</label>
-        <input
-          type="text"
+        <select
           id="category"
           value={category}
-          onChange={(e) => setCategory(e.target.value)}
+          onChange={(e) => setCategory(e.target.value)} // Ensure this sets the ObjectId
           className="input-field"
-        />
+        >
+          <option value="">Select a Category</option>
+          {categories.map((cat) => (
+            <option key={cat._id} value={cat._id}>{cat.name}</option>
+          ))}
+        </select>
       </div>
+
 
       <div className="form-group">
         <label htmlFor="description">Description</label>

@@ -12,6 +12,7 @@ import RegistrationPage from "./Pages/RegistrationPage"
 import ProfilePage from "./Pages/ProfilePage"
 import ContactPage from "./Pages/ContactPage"
 import AdminLogin from "./Pages/Admin/Login/Login"
+import ProductList from "./Pages/ProductListing/ProductListing"
 
 
 
@@ -25,7 +26,7 @@ function App() {
         <Route path="/" element={<Homepage/>}/>
         <Route path="/about-us" element={<AboutPage/>}/>
         <Route path="/products" element={<ProductPage/>}/>
-        <Route path="/productinner" element={<ProductInner/>}/>
+        <Route path="/productinner/:id" element={<ProductInner/>}/>
 
         <Route path="/admin/*" element={<AdminPanel/>}/>
 
@@ -36,6 +37,7 @@ function App() {
         <Route path="/contact-us" element={<ContactPage/>}/>
         <Route path="/contact-us" element={<ContactPage/>}/>
         <Route path="/admin-login" element={<AdminLogin/>}/>
+        <Route path="/productList/:categoryId" element={<ProductList/>}/>
 
       </Routes>
     </Router>

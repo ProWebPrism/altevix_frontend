@@ -9,12 +9,13 @@ import UpdateCustomMade from '../Custommade/CustomMade';
 import UpdateStoreSection from '../StoreSection/StoreSection';
 import ProductSectionUpdate from '../ProductSection/PoductSection';
 import UpdateAboutSection from '../UpdateAboutSection/UpdateAboutSection';
-import ProductPage from '../ProductPage/ProductPage'
+import ManageCategories from '../ManageCategories/ManageCategories';
 import UpdateContactDetails from '../ContactPage/ContactPage';
 import PasswordReset from '../ResetPassword/ResetPassword';
 import AddProduct from '../AddProduct/AddProduct';
 import ProductCard from '../ProductList/ProductList';
 import EditProduct from '../EditProduct/EditProduct';
+import UpdateProductPage from '../ProductPage/ProductPage';
 
 const AdminPanel = () => {
   const [isHomePageMenuOpen, setIsHomePageMenuOpen] = useState(false);
@@ -74,10 +75,13 @@ const AdminPanel = () => {
               <Link to="/admin/about">Update About Page</Link>
             </li>
             <li>
-              <Link to="/admin/product">Update Product Page</Link>
+              <Link to="/admin/category">Manage Categories </Link>
             </li>
             <li>
               <Link to="/admin/contact">Update Contact Page</Link>
+            </li>
+            <li>
+              <Link to="/admin/product-page">Update Product Page </Link>
             </li>
             <li>
               <Link to="/admin/reset-password">Reset Password</Link>
@@ -85,6 +89,7 @@ const AdminPanel = () => {
             <li>
               <Link to="/admin/products">Products </Link>
             </li>
+
             {/* Add other navigation links if needed */}
           </ul>
         </nav>
@@ -100,12 +105,14 @@ const AdminPanel = () => {
           <Route path="store" element={<UpdateStoreSection />} />
           <Route path="product-section" element={<ProductSectionUpdate />} />
           <Route path="about" element={<UpdateAboutSection />} />
-          <Route path="product" element={<ProductPage />} />
+          <Route path="category" element={<ManageCategories />} />
           <Route path="contact" element={<UpdateContactDetails />} />
           <Route path="reset-password" element={<PasswordReset />} />
           <Route path="add-product" element={<AddProduct />} />
           <Route path="products" element={<ProductCard />} />
           <Route path="editproduct/:id" element={<EditProduct />} />
+          <Route path="product-page" element={<UpdateProductPage />} />
+
           {/* Add other routes as needed */}
         </Routes>
       </main>
