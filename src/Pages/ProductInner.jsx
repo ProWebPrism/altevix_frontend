@@ -16,6 +16,7 @@ import apiClient from '../API/api'
 
 
 
+
 const ProductInner = () => {
   const [productImage, setProductImage] = useState(null)
   const [productName, setProductName] = useState('')

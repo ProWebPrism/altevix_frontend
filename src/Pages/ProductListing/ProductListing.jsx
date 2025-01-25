@@ -11,6 +11,8 @@ import apiClient from '../../API/api';
 
 const ProductList = () => {
     const [products, setProducts] = useState([])
+    const [category, setCategory] = useState('')
+    
     const { categoryId } = useParams()
     const navigate = useNavigate()
     useEffect(() => {
@@ -20,6 +22,11 @@ const ProductList = () => {
             console.log(response);
             
             setProducts(response.data.products)
+            if (response.data.products.length > 0) {
+              setCategory(response.data.products[0].category.name); 
+            } else {
+              setCategory('');
+            }
         } catch (error) {
             console.error(error);
             
@@ -32,7 +39,8 @@ const ProductList = () => {
       <Navbar />
       <div>
         {/* Banner */}
-        <ProductListBanner mainBanner={img} title={'Passenger Elevators'} />
+        <ProductListBanner mainBanner={img} title={category} />
+
 
         {/* Main Section */}
         <div className="wrapper product-list-container">

@@ -75,6 +75,16 @@
     left: 33%;
     top: 31%;
 }
+@media (max-width:1366px) {
+    .contact-section .brand-name {
+       left: 30%;
+    }
+}
+@media (max-width:991px) {
+    .contact-section .brand-name {
+       left: 25%;
+    }
+}
 @media (max-width: 768px) {
     .contact-section {
         flex-direction: column;
@@ -93,6 +103,7 @@
 
     .contact-card h3 {
         font-size: 2rem; 
+        margin: 50px;
     }
 
     .contact-form button {
@@ -104,4 +115,5 @@
         transform: rotate(0deg);
     }
 }
+
 

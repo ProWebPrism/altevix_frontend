@@ -62,6 +62,8 @@
   @media (max-width: 768px) {
     .who-we-are-content {
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     .left-side {
       display: flex;

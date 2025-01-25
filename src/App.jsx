@@ -13,11 +13,13 @@ import ProfilePage from "./Pages/ProfilePage"
 import ContactPage from "./Pages/ContactPage"
 import AdminLogin from "./Pages/Admin/Login/Login"
 import ProductList from "./Pages/ProductListing/ProductListing"
-
+import { FaWhatsapp } from "react-icons/fa";
 
 
 function App() {
-
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.me/7558911587", "_blank");
+  };
 
   return (
     <>
@@ -41,6 +43,10 @@ function App() {
 
       </Routes>
     </Router>
+          {/* WhatsApp Floating Button */}
+          <div className="whatsapp-button" onClick={handleWhatsAppClick}>
+        <FaWhatsapp />
+      </div>
       
     </>
   )
