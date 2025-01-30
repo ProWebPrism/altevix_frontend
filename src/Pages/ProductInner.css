@@ -6,6 +6,9 @@
     max-width: fit-content;
     margin-bottom: 20px;
 }
+.product-inner-des {
+    display: flex;
+}
 
 .product-detaling {
     margin: 50px 0px;
@@ -127,23 +130,36 @@
     border: 1px solid #DC0000;
     color: #DC0000;
 }
-.techincal-specialty{
-    padding: 50px 0px;
-}
-.techincal-specialty h2{
-    font-size: 2rem;
-    color: #DC0000;
+.techincal-specialty {
+    padding: 60px 0;
     text-align: center;
-    font-weight: 600;
-    max-width: fit-content;
-    margin: 0 auto;
-    border-bottom: 3px solid #DC0000;
 }
-.techincalspecialties-row{
+
+.techincal-specialty h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #DC0000;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.techincal-specialty h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #DC0000;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+}
+
+.techincalspecialties-row {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 50px 0px 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 .customazied-products{
     display: flex;
@@ -168,3 +184,178 @@
 .customazied-content{
     margin: 50px 0px;
 }
+.add-to-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-to-cart button {
+    cursor: pointer;
+    background-color: #DC0000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+    margin-left: 80px;
+}
+.add-to-cart button:hover {
+    background-color: transparent;
+    color: #DC0000;
+    border: #DC0000 solid 2px;
+}
+
+@media (max-width: 1024px) {
+    .product-inner-des {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .add-to-cart {
+      width: 100%;
+      justify-content: flex-start;
+      margin-top: 20px;
+    }
+  
+    .add-to-cart button {
+      margin-left: 0;
+    }
+  
+    .product-detail-row {
+      flex-direction: column-reverse;
+    }
+  
+    .product-detail-col1,
+    .product-detail-col2 {
+      width: 100%;
+    }
+  
+    .product-detail-col2 {
+      margin-bottom: 40px;
+    }
+  
+    .product-appliction-wrapp {
+      flex-wrap: wrap;
+    }
+  
+    .product-appliction-col1,
+    .product-appliction-col2,
+    .product-appliction-col3 {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  
+    .techincalspecialties-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .techincal-specialty h2 {
+        font-size: 1.8rem;
+    }
+    .tech-box {
+        width: 100%;
+    }
+    .tech-box::after {
+        background-color: white;
+    }
+    .customazied-products {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .product-inner-des h3 {
+      font-size: 1.5rem;
+    }
+  
+    .product-detail-card h3 {
+      font-size: 1.2rem;
+      padding-left: 30px;
+    }
+  
+    .product-detail-card p {
+      padding-left: 30px;
+    }
+  
+    .product-detail-card h3::after {
+      border-left-width: 15px;
+      border-top-width: 8px;
+      border-bottom-width: 8px;
+    }
+  
+    .appliction-list h3 {
+      font-size: 1.5rem;
+    }
+  
+    .techincal-specialty h2,
+    .customazied-head h2 {
+      font-size: 1.5rem;
+    }
+  
+    .product-appliction-col img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .appliction-list li {
+      padding-left: 30px;
+    }
+  
+    .appliction-list ol li::before {
+      width: 20px;
+      height: 20px;
+      font-size: 0.9rem;
+    }
+  
+    .add-to-cart button {
+      width: 100%;
+      padding: 15px;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product-detail-card {
+      padding: 20px 0;
+    }
+  
+    .product-detail-card h3 {
+      padding-left: 25px;
+    }
+  
+    .product-detail-card p {
+      padding-left: 25px;
+    }
+  
+    .appliction-list li {
+      padding-left: 25px;
+      font-size: 0.9rem;
+    }
+  
+    .product-appliction-wrapp {
+      flex-direction: column;
+    }
+  
+    .techincalspecialties-row {
+      display: block;
+    }
+    .customizedbox {
+        width: 100%;
+    }
+  
+    .customazied-products {
+      margin: 30px 0;
+    }
+  
+    .product-detaling {
+      margin: 30px 0;
+    }
+  
+    .product-Applications {
+      padding: 40px 0;
+    }
+  }
+

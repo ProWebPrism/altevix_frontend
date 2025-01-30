@@ -14,7 +14,7 @@ function ProductDescription({ description, subheading }) {
                     <p>{description}</p>
                 </div>
             </div>
-            <div className="filter-sec">
+            {/* <div className="filter-sec">
                 <div className="wrapper">
                     <p>Find the product that best suits your needs:</p>
                     <div className="product-filter-wrapp">
@@ -27,7 +27,7 @@ function ProductDescription({ description, subheading }) {
                         <button class="submit-btn" fdprocessedid="8sr2j8">Submit</button>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </section>
     )
 }

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './HeroSection.module.css';
 import apiClient from '../../API/api';
 import slider from '../../assets/images/slider1.jpg'
@@ -60,7 +61,7 @@ export default function Carousel() {
                 <div className={styles.content}>
                   <h1 className={styles.title}>{slide.title}</h1>
                   <p className={styles.subtitle}>{slide.description}</p>
-                  <button className={styles.button}>Contact us</button>
+                  <button className={styles.button}><Link to='/contact-us' className={styles.link}>Contact us</Link></button>
                 </div>
               </div>
             </div>

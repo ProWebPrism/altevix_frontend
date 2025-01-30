@@ -11,11 +11,16 @@ import LoginPage from "./Pages/LoginPage"
 import RegistrationPage from "./Pages/RegistrationPage"
 import ProfilePage from "./Pages/ProfilePage"
 import ContactPage from "./Pages/ContactPage"
-
+import AdminLogin from "./Pages/Admin/Login/Login"
+import ProductList from "./Pages/ProductListing/ProductListing"
+import { FaWhatsapp } from "react-icons/fa";
+import SparePartsPage from "./Pages/SpareParts"
 
 
 function App() {
-
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.me/7558911587", "_blank");
+  };
 
   return (
     <>
@@ -24,7 +29,7 @@ function App() {
         <Route path="/" element={<Homepage/>}/>
         <Route path="/about-us" element={<AboutPage/>}/>
         <Route path="/products" element={<ProductPage/>}/>
-        <Route path="/productinner" element={<ProductInner/>}/>
+        <Route path="/productinner/:id" element={<ProductInner/>}/>
 
         <Route path="/admin/*" element={<AdminPanel/>}/>
 
@@ -33,9 +38,17 @@ function App() {
         <Route path="/registration-page" element={<RegistrationPage/>}/>
         <Route path="/Profile-page" element={<ProfilePage/>}/>
         <Route path="/contact-us" element={<ContactPage/>}/>
+        <Route path="/contact-us" element={<ContactPage/>}/>
+        <Route path="/admin-login" element={<AdminLogin/>}/>
+        <Route path="/productList/:categoryId" element={<ProductList/>}/>
+        <Route path="/spare-parts" element={<SparePartsPage/>}/>
 
       </Routes>
     </Router>
+          {/* WhatsApp Floating Button */}
+          <div className="whatsapp-button" onClick={handleWhatsAppClick}>
+        <FaWhatsapp />
+      </div>
       
     </>
   )

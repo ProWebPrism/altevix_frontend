@@ -15,17 +15,17 @@
     margin-bottom: 20px;
   }
   
-  .form-group, .card-group {
+  .admin-update-section .form-group, .card-group {
     margin-bottom: 15px;
   }
   
-  label {
+  .admin-update-section label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
   }
   
-  input, textarea {
+  .admin-update-section input, textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
@@ -34,22 +34,22 @@
     margin-bottom: 10px;
   }
   
-  textarea {
+  .admin-update-section textarea {
     resize: none;
   }
   
-  .form-section {
+  .admin-update-section .form-section {
     margin-top: 20px;
     border-top: 1px solid #ddd;
     padding-top: 15px;
   }
   
-  .form-section h2 {
+  .admin-update-section .form-section h2 {
     color: #333;
     margin-bottom: 10px;
   }
   
-  .btn-add, .btn-submit {
+  .admin-update-section .btn-add, .btn-submit {
     display: block;
     width: 100%;
     background-color: #f44336;
@@ -62,7 +62,7 @@
     margin-top: 10px;
   }
   
-  .btn-add:hover, .btn-submit:hover {
+  .admin-update-section .btn-add:hover, .btn-submit:hover {
     background-color: #d32f2f;
   }
   

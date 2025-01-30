@@ -1,24 +1,101 @@
-.related-card{
+/* RelatedProductBox.css */
+.related-section {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .related {
+    padding: 0px 150px;
+  }
+  
+  .slide-item {
+    padding: 0 15px;
+  }
+  
+  .related-card {
     background-color: #fff;
-    width: 24%;
     border-radius: 10px;
     border: 1px solid #DC0000;
-}
-.related-product-image{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin: 10px 0;
+  }
+  
+  .related-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Slick slider customization */
+  .slick-prev:before,
+  .slick-next:before {
+    color: #DC0000;
+    font-size: 30px;
+  }
+  
+  .slick-prev {
+    left: -40px;
+  }
+  
+  .slick-next {
+    right: -40px;
+  }
+  
+  .slick-dots li button:before {
+    color: #DC0000;
+    opacity: 0.5;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #DC0000;
+    opacity: 1;
+  }
+  
+  /* Keep existing styles for product card content */
+  .related-product-image {
     padding: 20px;
-}
-.related-product-card-content{
+  }
+  
+  .related-product-card-content {
     background-color: #DC0000;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
     color: #fff;
-}
-.related-product-card-content h3{
+  }
+  
+  .related-product-card-content h3 {
     font-weight: 600;
     font-size: 1.2rem;
-}
-.related-product-card-content p{
+  }
+  
+  .related-product-card-content p {
     font-weight: 400;
     font-size: 1rem;
     margin-top: 20px;
-}
+  }
+  
+  .related-h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Inter';
+    margin-bottom: 40px;
+  }
+  
+  .related-h2 span {
+    color: rgb(221, 4, 4);
+    font-family: 'Inter';
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .related {
+      padding: 0 20px;
+    }
+    
+    .slick-prev {
+      left: -25px;
+    }
+    
+    .slick-next {
+      right: -25px;
+    }
+  }

@@ -2,7 +2,6 @@
     font-family: 'Inter';
     padding: 50px 0px;
     position: relative;
-    z-index: -2;
     background-color: rgb(226, 225, 225);
 }
 .journey-content {
@@ -58,5 +57,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 90%;
+    }
+    .journey-content .left {
+        width: 100%;
+    }
+    .journey-content .right {
+        width: 90%;
     }
 }

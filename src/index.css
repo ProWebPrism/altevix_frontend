@@ -39,3 +39,46 @@ table {border-collapse: collapse; border-spacing: 0;}
 }
 
 .wrapper{width: 94%; max-width: 1320px; margin: 0 auto 0;}
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust distance from the bottom */
+  right: 20px; /* Adjust distance from the right */
+  background-color: #25d366; /* WhatsApp green color */
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-button svg {
+  font-size: 24px;
+}
+.catlog-btn {
+  margin-top: 30px;
+  padding: 10px 30px;
+  color: #ffffff;
+  background-color: #e60000;
+  max-width: fit-content;
+  border: #e60000 1px solid;
+  border-radius: 7px;
+  font-size: medium;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.catlog-btn:hover {
+  border: #e60000 1px solid;
+  color: #e60000;
+  background-color: #ffffff;
+}

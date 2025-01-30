@@ -6,6 +6,7 @@ import AboutBanner from '../Components/AboutBanner/AboutBanner';
 import WhoWeR from '../Components/WhoWeR/WhoWeR';
 import Journey from '../Components/Journey/Journey';
 import Philosophy from '../Components/Philosophy/Philosophy';
+import GoogleMeet from '../Components/GoogleMeet/GoogleMeet'
 import apiClient from '../API/api';
 
 const AboutPage = () => {
@@ -46,6 +47,7 @@ const AboutPage = () => {
         image={aboutData.thirdSection.image}
       />
       <Contact />
+      <GoogleMeet/>
       <Footer />
     </>
   );

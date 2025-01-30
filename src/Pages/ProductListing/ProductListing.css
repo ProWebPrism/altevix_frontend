@@ -1,0 +1,137 @@
+Container for Product List Section
+.product-list-container {
+    display: flex;
+    gap: 20px; /* Space between sidebar and product list */
+    margin-top: 20px;
+    padding: 50px 0px;
+}
+
+/* Filter Sidebar */
+.filter-sidebar {
+    flex: 0.2; /* Adjusted width */
+    padding: 20px;
+    border-radius: 8px;
+    width: 20%;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/* Filter Title */
+.filter-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #d32f2f;
+}
+
+/* Filter Dropdown */
+.filter-select {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px 30px 8px 8px; /* Add space for the arrow */
+    border: none;
+    border-bottom: 2px solid #d32f2f; /* Red underline */
+    background-color: transparent;
+    font-size: 1rem;
+    color: #333;
+    appearance: none; /* Remove default arrow */
+}
+
+.filter-select:focus {
+    outline: none; /* Remove focus outline */
+    border-bottom: 2px solid #b71c1c; /* Darker red on focus */
+}
+
+/* Product List Section */
+.product-list-section {
+    flex: 0.8; /* Adjust width to fit alongside the sidebar */
+    display: grid;
+    gap: 20px; /* Space between cards */
+}
+
+/* Default: Two cards per row */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    gap: 20px;
+}
+
+/* Larger Screens: Four cards per row */
+@media (min-width: 1024px) {
+    .product-list {
+        grid-template-columns: repeat(4, 1fr); /* Four cards per row */
+    }
+}
+
+/* Scoped Product Card Styles */
+.product-list-card {
+    background-color: rgb(228, 225, 225);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: none;
+    border-radius: 0px;
+}
+
+/* Hover Effect for Product Cards */
+
+/* Product Image */
+.product-list-container .product-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Product Name */
+.product-list-container .product-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Product Description */
+.product-list-container .product-description {
+    font-size: 0.9rem;
+    color: #777;
+    text-align: center;
+    margin-bottom: 10px;
+    max-height: 60px;
+    overflow: hidden;
+}
+
+/* Product Price */
+.product-list-container .product-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #d32f2f;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Product Button */
+.product-list-container .product-btn {
+    background-color: #d32f2f;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-bottom: 25px;
+}
+
+/* Button Hover Effect */
+.product-list-container .product-btn:hover {
+    background-color: #b71c1c;
+}
+
+.product-list-container .product-btn:focus {
+    outline: none;
+}

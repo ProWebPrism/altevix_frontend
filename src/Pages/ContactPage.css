@@ -44,6 +44,15 @@
     background-color: #DC0000 !important;
     color: #fff;
 }
+.contact-page-form .contact-form textarea{
+    border: none;
+    border-bottom:1px solid #ffffff;
+    height: 80px;
+    background-color: #DC0000 !important;
+    color: #fff;
+    border-radius: 0;
+    padding-left: 0;
+}
 .contact-page-form .contact-form input::placeholder {
     color: #ffffff;
 }

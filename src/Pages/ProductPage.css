@@ -1,26 +1,67 @@
-.productcatagoery{
+.productcategory {
     padding: 90px 0px 50px;
 }
-.productcatagoery-warpper{
+
+.productcategory-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 20px; /* Adds spacing between the cards */
 }
-.Complementarycatagoery{
+
+.productcategory-wrapper .product-card {
+    flex: 1 1 45%; /* Ensures two cards fit per row on larger screens */
+    max-width: 45%; /* Limits the width of each card on larger screens */
+}
+
+.Complementarycategory {
     padding: 90px 0px 20px;
     background-color: #F2F2F2;
 }
-.Complementarycatagoery-wrapper{
+
+.Complementarycategory-wrapper {
     margin: 50px 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px; /* Adds spacing between the cards */
 }
-.Complementarycatagoery h2{
+
+.Complementarycategory-wrapper .complementary-card {
+    flex: 1 1 45%; /* Ensures two complementary cards fit per row on larger screens */
+    max-width: 45%; /* Limits the width of each card on larger screens */
+}
+
+.Complementarycategory h2 {
     font-size: 2rem;
     font-weight: 700;
-    color:#DC0000;
+    color: #DC0000;
     border-bottom: 5px solid #DC0000;
     max-width: fit-content;
+}
+
+/* Responsive Breakpoints */
+@media screen and (max-width: 768px) {
+    .productcategory-wrapper .product-card,
+    .Complementarycategory-wrapper .complementary-card {
+        flex: 1 1 100%; /* Full width on smaller screens */
+        max-width: 100%; /* Ensure full width */
+    }
+
+    .productcategory-wrapper,
+    .Complementarycategory-wrapper {
+        flex-direction: column; /* Stack items vertically */
+        align-items: stretch; /* Stretch items to full width */
+    }
+
+    .productcategory,
+    .Complementarycategory {
+        padding: 50px 15px; /* Reduced padding on smaller screens */
+    }
+
+    .Complementarycategory h2 {
+        font-size: 1.5rem; /* Slightly smaller heading on mobile */
+        text-align: center;
+    }
 }

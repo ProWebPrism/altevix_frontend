@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import apiClient from '../../../API/api';
 import './ProductPage.css'; // Import CSS file
 
-const AdminUpdateSection = () => {
+const UpdateProductPage = () => {
   const [formData, setFormData] = useState({
     subheading: '',
     description: '',
     sliderMainTitle: '',
     sliderCards: [{ title: '', image: null }],
-    cardSection: [{ title: '', image: null }],
     complimentaryCards: [{ title: '', image: null }],
     bannerImage: null,  // Added bannerImage field
   });
@@ -168,7 +167,7 @@ const AdminUpdateSection = () => {
         </div>
 
         {/* Card Section */}
-        <div className="form-section">
+        {/* <div className="form-section">
           <h2>Card Section</h2>
           {formData.cardSection.map((card, index) => (
             <div className="card-group" key={`card-${index}`}>
@@ -192,7 +191,7 @@ const AdminUpdateSection = () => {
           >
             Add Card Section
           </button>
-        </div>
+        </div> */}
 
         {/* Complimentary Cards */}
         <div className="form-section">
@@ -229,4 +228,4 @@ const AdminUpdateSection = () => {
   );
 };
 
-export default AdminUpdateSection;
+export default UpdateProductPage;

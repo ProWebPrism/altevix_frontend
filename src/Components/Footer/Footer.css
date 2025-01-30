@@ -2,27 +2,31 @@
     display: flex;
     padding: 30px 0px;
     justify-content: space-between;
-    margin-bottom: 40px;
+    flex-wrap: wrap;
 }
+
 .about-us {
     width: 30%;
+    margin-bottom: 20px;
 }
+
+.altivex, .elevators, .contact {
+    width: 20%;
+    margin-bottom: 20px;
+}
+
 .footer-bottom {
     min-height: 60px;
     width: 100%;
-    background-color:#e30613;
+    background-color: #e30613;
+    padding: 10px 0;
 }
- .altivex {
-    margin-left: 50px;
-}
-.footer-content ul li{
+
+.footer-content ul li {
     font-size: 1rem;
     margin: 20px 0px;
 }
-/*
-.elevators {
-    margin-right: 50px;
-} */
+
 .about-us h4 {
     font-size: 3rem;
     font-weight: 700;
@@ -30,6 +34,7 @@
     width: fit-content;
     margin-bottom: 20px;
 }
+
 .footer-content h5 {
     font-weight: 700;
     border-bottom: #e30613 solid 3px;
@@ -37,20 +42,26 @@
     margin-bottom: 20px;
     font-size: 1.5rem;
 }
+
 .footer-bottom-content {
     display: flex;
     justify-content: space-between;
     padding: 20px 0px;
+    flex-wrap: wrap; /* Allows elements to wrap on smaller screens */
 }
+
 .footer-bottom-links {
     display: flex;
     align-items: center;
     color: white;
     width: 80%;
+    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
 }
-.footer-bottom-links li{
+
+.footer-bottom-links li {
     margin-right: 5%;
 }
+
 .footer-bottom .social-icons {
     color: white;
     width: 20%;
@@ -58,9 +69,42 @@
     align-items: center;
     justify-content: flex-end;
 }
+
 .footer-bottom .social-icons a:hover {
     color: #848181;
 }
-.footer-content .contact ul li span{
+
+.footer-content .contact ul li span {
     margin-left: 20px;
+}
+
+/* Media Query for smaller devices like tablets and below */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: row; /* Changed from column */
+        gap: 20px;
+        padding: 15px 10px;
+    }
+
+    .about-us, .contact {
+        width: 100%;
+    }
+
+    /* Modified section for Altivex and Elevators */
+    .altivex, .elevators {
+        width: calc(50% - 10px); /* Split into two columns */
+        margin-bottom: 0;
+    }
+
+    /* Remove the original width: 100% declaration */
+    /* Previous code: .about-us, .altivex, .elevators, .contact { width: 100% } */
+    .about-us, .contact {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .altivex, .elevators {
+        width: 100%; /* Stack vertically on very small screens */
+    }
 }
