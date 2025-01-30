@@ -279,7 +279,9 @@ const ProductInformation = () => {
                     }}
                 />
 
-            <button type="button" onClick={() => handleRemoveSolution(index)} className="remove-btn">Remove</button>
+            <button type="button" onClick={() => handleRemoveSolution(index)} className="remove-btn">Remove</button><br />
+            <button type="button" onClick={handleAddSolution} className="add-btn">Add Solution</button>
+            
           </div>
         ))}
               <div className="form-group">
@@ -292,7 +294,7 @@ const ProductInformation = () => {
                       className="input-field"
                   />
               </div>
-        <button type="button" onClick={handleAddSolution} className="add-btn">Add Solution</button>
+        
       </div>
 
       <button type="submit" className="submit-btn">Submit</button>

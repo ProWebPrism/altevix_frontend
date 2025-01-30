@@ -2,8 +2,7 @@
     display: flex;
     padding: 30px 0px;
     justify-content: space-between;
-    margin-bottom: 40px;
-    flex-wrap: wrap; /* Allows elements to wrap on smaller screens */
+    flex-wrap: wrap;
 }
 
 .about-us {
@@ -82,61 +81,30 @@
 /* Media Query for smaller devices like tablets and below */
 @media (max-width: 768px) {
     .footer-content {
-        flex-direction: column;
+        flex-direction: row; /* Changed from column */
+        gap: 20px;
         padding: 15px 10px;
     }
-    .about-us, .altivex, .elevators, .contact {
+
+    .about-us, .contact {
         width: 100%;
-        margin-bottom: 20px;
     }
-    .footer-bottom-content {
-        flex-direction: column;
-        align-items: center;
+
+    /* Modified section for Altivex and Elevators */
+    .altivex, .elevators {
+        width: calc(50% - 10px); /* Split into two columns */
+        margin-bottom: 0;
     }
-    .footer-bottom-links {
+
+    /* Remove the original width: 100% declaration */
+    /* Previous code: .about-us, .altivex, .elevators, .contact { width: 100% } */
+    .about-us, .contact {
         width: 100%;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-    .footer-bottom .social-icons {
-        width: 100%;
-        justify-content: center;
-        margin-top: 10px;
-    }
-    .footer-bottom-links li {
-        margin-right: 15px;
-    }
-    .about-us h4 {
-        font-size: 2.5rem; /* Adjust font size for smaller screens */
-    }
-    .footer-content h5 {
-        font-size: 1.2rem; /* Adjust font size for smaller screens */
     }
 }
 
-/* Media Query for extra small devices (phones in portrait mode) */
 @media (max-width: 480px) {
-    .footer-content {
-        padding: 10px 5px;
-    }
-    .footer-bottom-content {
-        flex-direction: column;
-    }
-    .footer-bottom-links {
-        justify-content: center;
-        width: 100%;
-    }
-    .footer-bottom .social-icons {
-        width: 100%;
-        justify-content: center;
-    }
-    .footer-bottom-links li {
-        margin-right: 10px;
-    }
-    .about-us h4 {
-        font-size: 2rem;
-    }
-    .footer-content h5 {
-        font-size: 1.1rem;
+    .altivex, .elevators {
+        width: 100%; /* Stack vertically on very small screens */
     }
 }

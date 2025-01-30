@@ -75,7 +75,7 @@ const Navbar = () => {
     const handleScheduleMeeting = async () => {
         try {
             const eventDetails = {
-                summary: "Meeting Scheduled via App",
+                summary: "Meeting Scheduled via Altivex",
                 startTime: selectedDate.toISOString(),
                 endTime: new Date(selectedDate.getTime() + 60 * 60 * 1000).toISOString(), // Add 1 hour
             };
@@ -156,17 +156,20 @@ const Navbar = () => {
                       <h1>Altivex Elevators Industry</h1>
                     </div>
                   )}
-                  <Link to="/" onClick={toggleMobileMenu}>
+                  <Link to="/" onClick={() => mobileMenuOpen && toggleMobileMenu}>
                     Home
                   </Link>
-                  <Link to="/about-us" onClick={toggleMobileMenu}>
+                  <Link to="/about-us" onClick={() => mobileMenuOpen && toggleMobileMenu}>
                     About
                   </Link>
-                  <Link to="/products" onClick={toggleMobileMenu}>
+                  <Link to="/products" onClick={() => mobileMenuOpen && toggleMobileMenu}>
                     Elevators
                   </Link>
-                  <Link to="/contact-us" onClick={toggleMobileMenu}>
+                  <Link to="/contact-us" onClick={() => mobileMenuOpen && toggleMobileMenu}>
                     Contact
+                  </Link>
+                  <Link to="/spare-parts" onClick={() => mobileMenuOpen && toggleMobileMenu}>
+                    Spare parts
                   </Link>
     
                   {/* Mobile-specific icons */}
@@ -255,10 +258,9 @@ const Navbar = () => {
                       className="cart-item-image"
                       onClick={() => navigate(`/productInner/${item.productId._id}`)}
                     >
-                      <img
-                        src={`http://localhost:5000/${item.productId.productImage}`}
-                        alt={item.name}
-                      />
+                      <img src={`http://localhost:5000/${item.productId?.productImage || 'default-image.jpg'}`} 
+     alt={item.name || 'Product Image'} />
+
                     </div>
                     <div className="cart-item-details">
                       <p onClick={() => navigate(`/productInner/${item.productId._id}`)}>

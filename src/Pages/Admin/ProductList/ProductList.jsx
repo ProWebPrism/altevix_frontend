@@ -42,7 +42,7 @@ const ProductCard = () => {
             <img src={`http://localhost:5000/${product.productImage}`} alt={product.name} className="product-image" />
             <div className="product-info">
               <h3>{product.name}</h3>
-              <p>{product.category}</p>
+              <p>{product.category.name}</p>
             </div>
             <div className="product-actions">
               <button  className="edit-btn" onClick={() => navigate(`/admin/editproduct/${product._id}`)}>

@@ -60,7 +60,7 @@ function ContactPage() {
                     <input type="text" name="name" placeholder="Name" onClick={handleInputChange} />
                     <input type="text" name="company" placeholder="Company" onClick={handleInputChange}/>
                     <input type="text" name="email" placeholder="Email" onClick={handleInputChange}/>
-                    <input type="text" name="message" placeholder="Comments" onClick={handleInputChange}/>
+                    <textarea name="message" placeholder="Comments" onClick={handleInputChange}/>
                     <button type="submit" className="login-btn">Submit</button>
                   </form>
                 </div>

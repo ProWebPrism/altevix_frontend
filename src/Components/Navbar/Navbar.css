@@ -284,7 +284,6 @@ html, body {
 }
 .nav-links {
     display: flex;
-    gap: 1rem;
   }
   
   .mobile-menu-toggle {
@@ -296,6 +295,9 @@ html, body {
     .logo {
       font-size: 1.5rem;
     }
+    .nav-links {
+        font-size: 0.8rem;
+      }
   }
   @media (max-width:1200px) {
     .logo {
@@ -316,7 +318,6 @@ html, body {
     .nav-links {
       display: none;
       flex-direction: column;
-      gap: 1rem;
       position: fixed;
       top: 0;
       left: 0;
@@ -348,7 +349,6 @@ html, body {
     .mobile-user-icon {
       font-size: 1.5rem;
       color: #dc0000;
-      margin-top: 1rem;
     }
   
     .mobile-auth-links {

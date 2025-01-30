@@ -36,7 +36,7 @@ useEffect(() => {
 const handleScheduleMeeting = async () => {
   try {
       const eventDetails = {
-          summary: "Meeting Scheduled via App",
+          summary: "Meeting Scheduled via Altevix",
           startTime: selectedDate.toISOString(),
           endTime: new Date(selectedDate.getTime() + 60 * 60 * 1000).toISOString(), // Add 1 hour
       };

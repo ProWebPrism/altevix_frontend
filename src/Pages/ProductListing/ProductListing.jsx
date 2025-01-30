@@ -44,7 +44,8 @@ const ProductList = () => {
 
         {/* Main Section */}
         <div className="wrapper product-list-container">
-                  <aside className="filter-sidebar">
+          <br /><br /><br />
+                  {/* <aside className="filter-sidebar">
                       <h2 className="filter-title">Filters</h2>
                       <select id="filter" className="filter-select">
                           <option value="all">All</option>
@@ -53,7 +54,7 @@ const ProductList = () => {
                           <option value="electronics">Electronics</option>
                           <option value="furniture">Furniture</option>
                       </select>
-                  </aside>
+                  </aside> */}
 
 
           {/* Product List */}

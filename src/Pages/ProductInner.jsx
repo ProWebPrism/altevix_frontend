@@ -13,6 +13,7 @@ import GoogleMeet from '../Components/GoogleMeet/GoogleMeet'
 import './ProductInner.css'
 import { useParams } from 'react-router-dom'
 import apiClient from '../API/api'
+import RealtedProductBox from '../Components/RealtedProductBox/RealtedProductBox'
 
 
 
@@ -67,11 +68,14 @@ const ProductInner = () => {
       <Navbar />
       <ProductInnerBanner name={productName} category={category} />
       <BreadCrumps />
-      <div className="product-inner-des">
-        <div className="wrapper">
+      <div className="product-inner-des wrapper">
+        <div className="">
           <h3>{productName}</h3>
           <p>{description}</p>
         </div>
+        <div className="add-to-cart">
+        <button onClick={()=>handleAddToCart(id)}>Add item to cart</button>
+      </div>
       </div>
       <div className="product-detaling">
         <div className="wrapper">
@@ -160,9 +164,8 @@ const ProductInner = () => {
           </div>
         </div>
       </div>
-      <div className="add-to-cart">
-        <button onClick={()=>handleAddToCart(id)}>Add item to cart</button>
-      </div>
+      <RealtedProductBox category={category}/>
+
 
       <Contact />
       <GoogleMeet/>

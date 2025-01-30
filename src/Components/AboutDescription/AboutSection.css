@@ -34,7 +34,7 @@
 
   
   /* Right Side: Text and Button */
-  .right-side {
+  .about-section .right-side {
     flex: 2;
     max-width: 65%; /* Adjust based on design preference */
   }
@@ -80,8 +80,8 @@
       align-items: center;
     }
   
-    .left-side,
-    .right-side {
+    .about-section .left-side,
+    .about-section .right-side {
       max-width: 100%;
     }
   
@@ -89,7 +89,7 @@
       text-align: center;
     }
   
-    .right-side {
+    .about-section .right-side {
       text-align: center;
     }
     .description {

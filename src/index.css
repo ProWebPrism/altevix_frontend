@@ -65,3 +65,20 @@ table {border-collapse: collapse; border-spacing: 0;}
 .whatsapp-button svg {
   font-size: 24px;
 }
+.catlog-btn {
+  margin-top: 30px;
+  padding: 10px 30px;
+  color: #ffffff;
+  background-color: #e60000;
+  max-width: fit-content;
+  border: #e60000 1px solid;
+  border-radius: 7px;
+  font-size: medium;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.catlog-btn:hover {
+  border: #e60000 1px solid;
+  color: #e60000;
+  background-color: #ffffff;
+}
