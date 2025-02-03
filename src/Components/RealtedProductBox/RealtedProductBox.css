@@ -53,6 +53,8 @@
   /* Keep existing styles for product card content */
   .related-product-image {
     padding: 20px;
+    display: flex;
+    justify-content: center;
   }
   
   .related-product-card-content {

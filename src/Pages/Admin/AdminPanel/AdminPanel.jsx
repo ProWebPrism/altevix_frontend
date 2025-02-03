@@ -16,6 +16,7 @@ import AddProduct from '../AddProduct/AddProduct';
 import ProductCard from '../ProductList/ProductList';
 import EditProduct from '../EditProduct/EditProduct';
 import UpdateProductPage from '../ProductPage/ProductPage';
+import AdminMeetingsList from '../MeetingsList/AdminMeetings';
 
 const AdminPanel = () => {
   const [isHomePageMenuOpen, setIsHomePageMenuOpen] = useState(false);
@@ -89,6 +90,9 @@ const AdminPanel = () => {
             <li>
               <Link to="/admin/products">Products </Link>
             </li>
+            <li>
+              <Link to="/admin/meetings">Meetings </Link>
+            </li>
 
             {/* Add other navigation links if needed */}
           </ul>
@@ -112,6 +116,7 @@ const AdminPanel = () => {
           <Route path="products" element={<ProductCard />} />
           <Route path="editproduct/:id" element={<EditProduct />} />
           <Route path="product-page" element={<UpdateProductPage />} />
+          <Route path='meetings' element={<AdminMeetingsList/>} />
 
           {/* Add other routes as needed */}
         </Routes>

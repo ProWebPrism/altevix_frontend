@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faXTwitter, faLinkedinIn, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faUserCircle, faShoppingCart, faBars, faTimes, } from '@fortawesome/free-solid-svg-icons';
+import { faUserCircle, faShoppingCart, faBars, faTimes,faCalendar } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import apiClient from '../../API/api';
@@ -176,12 +176,9 @@ const Navbar = () => {
                   {mobileMenuOpen && (
                     <>
                       <FontAwesomeIcon
-                        icon={faShoppingCart}
+                        icon={faCalendar}
                         className="mobile-cart-icon"
-                        onClick={() => {
-                          toggleCart()
-                          toggleMobileMenu()
-                        }}
+                        onClick={() => navigate('/meetings')}
                       />
                       {isLoggedIn ? (
                                           <>
@@ -213,7 +210,7 @@ const Navbar = () => {
     
                 {/* Desktop Auth Buttons */}
                 <div className={`auth-buttons ${mobileMenuOpen ? "active" : ""}`}>
-                  <FontAwesomeIcon icon={faShoppingCart} className="cart-icon" onClick={toggleCart} />
+                  <FontAwesomeIcon icon={faCalendar} className="cart-icon" onClick={() => navigate('/meetings')} title="Scheduled meetings"/>
                   {isLoggedIn ? (
                     <div className="user-dropdown-container">
                       <FontAwesomeIcon icon={faUserCircle} className="user-icon" onClick={toggleDropdown} />

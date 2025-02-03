@@ -15,6 +15,7 @@ import AdminLogin from "./Pages/Admin/Login/Login"
 import ProductList from "./Pages/ProductListing/ProductListing"
 import { FaWhatsapp } from "react-icons/fa";
 import SparePartsPage from "./Pages/SpareParts"
+import UpcomingMeetings from "./Components/UpcomingMeetings/UpcomingMeetings"
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
         <Route path="/admin-login" element={<AdminLogin/>}/>
         <Route path="/productList/:categoryId" element={<ProductList/>}/>
         <Route path="/spare-parts" element={<SparePartsPage/>}/>
+        <Route path="/meetings" element={<UpcomingMeetings/>}/>
 
       </Routes>
     </Router>

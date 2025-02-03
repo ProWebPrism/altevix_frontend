@@ -5,7 +5,10 @@
 }
 
 .Profile-page .wrapper {
-    flex: 1;  /* Make it take up available space between Navbar and Footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     max-width: 800px;
     background-color: #F2F2F2;
     padding: 40px;  /* Adjust padding to fit better */
@@ -92,7 +95,7 @@
     background-color: #b70000;
 }
 
-button {
+.Profile-page button {
     padding: 10px;
     background-color: #DC0000;
     color: white;
@@ -102,6 +105,6 @@ button {
     font-size: 1rem;
 }
 
-button:hover {
+.Profile-page button:hover {
     background-color: #b70000;
 }

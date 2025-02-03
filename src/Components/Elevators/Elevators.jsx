@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from "react";
+import { useNavigate } from 'react-router-dom'
 import "./Elevators.css";
 import elevator from '../../assets/images/elevators.jpg'
 import apiClient from "../../API/api";
@@ -11,6 +12,7 @@ const [elevators, setElevators] = useState({
               { image: null, title: '', description: '' },
                { image: null, title: '', description: '' }]
       });
+      const navigate = useNavigate()
       useEffect(() => {
         const fetchCardSection = async () => {
             try {

@@ -98,7 +98,7 @@ function ProfilePage() {
           )}
         </div>
 
-        <h3>Upcoming Meetings</h3>
+        {/* <h3>Upcoming Meetings</h3>
         {meetings.length === 0 ? (
           <p>No upcoming meetings scheduled.</p>
         ) : (
@@ -111,7 +111,7 @@ function ProfilePage() {
               </li>
             ))}
           </ul>
-        )}
+        )} */}
       </div>
     </div>
     <Footer/>

@@ -23,17 +23,20 @@
 
 
 .custom-made-section .left-side {
-    width: 33%;
+    width: 50%;
 }
 .custom-made-section .left-side img {
     height: 100%;
 }
 .section-content {
     display: flex;
-    align-items: center;
 }
 .custom-made-section .right-side {
     padding: 20px 40px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .custom-made-section .right-side h3 {
     font-size: 2rem;
@@ -48,6 +51,9 @@
 .custom-made-section .right-side p {
     margin-bottom: 20px;
     font-size: 1.1rem;
+}
+.about-btn-customemade {
+    width: 40%;
 }
 @media (max-width: 768px) {
     .section-content {
