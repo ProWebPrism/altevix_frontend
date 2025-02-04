@@ -2,11 +2,11 @@ import React from 'react'
 import './TechnicalBox.css'
 
 
-function TechnicalBox() {
+function TechnicalBox({ title, feature }) {
   return (
     <div className='tech-box'>
-        <h3>Duty speed</h3>
-        <p>Up to 3 m/s</p>
+        <h3>{title}</h3>
+        <p>{feature}</p>
     </div>
   )
 }

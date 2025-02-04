@@ -1,19 +1,21 @@
 import React from 'react';
 import "./ProductCard.css"
 import ProductCardimg from '../../assets/images/about-banner.png'
+import { useNavigate } from 'react-router-dom';
 
-function ProductCard({ card }) {
+function ProductCard({ category }) {
+  const navigate = useNavigate()
   return (
-    <div className='product-card'>
+    <div className='product-card' onClick={() => navigate(`/productList/${category._id}`)}>
         <div className="product-image">
              <img
-                src={`http://localhost:5000/${card.image}`}
+                src={`http://localhost:5000/${category.image}`}
                 alt="Decorative"
                 className="decorative-image"
             />
         </div>
         <div className="product-name">
-            <h3>{card.title}</h3>
+            <h3>{category.name}</h3>
         </div>
     </div>
   )

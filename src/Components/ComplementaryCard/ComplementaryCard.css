@@ -33,6 +33,38 @@
     width:100%;
     padding: 20px 0px;
     left: -14%;
-    bottom: -10%;
+    bottom: -26%;
     font-weight: 600;
+}
+@media screen and (max-width: 768px) {
+    .Complementary-card {
+        width: 100%; /* Full width on mobile screens */
+        margin-bottom: 20px; /* Adjust margin for better spacing */
+    }
+
+    .Complementary-image {
+        height: 250px; /* Reduce height for smaller screens */
+        border-left: 40px solid #fff; /* Adjust border size */
+    }
+
+    .Complementary-name {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+        left: -10%; /* Adjust positioning to keep visible */
+        bottom: -5%; /* Adjust bottom positioning */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Complementary-image {
+        height: 200px; /* Further reduce height on very small screens */
+        border-left: 20px solid #fff; /* Adjust border size further */
+    }
+
+    .Complementary-name {
+        font-size: 1.2rem; /* Smaller font size for very small screens */
+        left: 0%; /* Ensure visibility on smaller screens */
+        bottom: 0%; /* Adjust bottom positioning */
+        transform: rotate(0deg); /* Remove rotation for better readability */
+        text-align: center; /* Center the text */
+    }
 }

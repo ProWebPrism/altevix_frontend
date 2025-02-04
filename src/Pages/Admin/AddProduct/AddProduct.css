@@ -1,0 +1,152 @@
+.product-info-container {
+    background-color: white;
+    color: black;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .product-info-container h2 {
+    color: #ff4d4d;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .product-info-container .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .product-info-container label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+  
+  .product-info-container .input-field,
+  .product-info-container textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  .product-info-container textarea {
+    min-height: 120px;
+  }
+  
+  .product-info-container button {
+    cursor: pointer;
+    padding: 12px 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 12px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .product-info-container button:hover {
+    background-color: #ff6666;
+  }
+  
+  .product-info-container button.remove-btn {
+    background-color: #ff6666;
+    padding: 8px 12px;
+  }
+  
+  .product-info-container button.add-btn {
+    background-color: #ff4040;
+  }
+  
+  .product-info-container button.submit-btn {
+    background-color: #f04d4d;
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .advantage-section,
+  .feature-section,
+  .solution-card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  .advantage-section input,
+  .feature-section input,
+  .solution-card input {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+  }
+  
+  .advantage-section textarea,
+  .feature-section textarea,
+  .solution-card textarea {
+    margin-bottom: 10px;
+  }
+  
+  .advantage-section button,
+  .feature-section button,
+  .solution-card button {
+    margin-top: 10px;
+  }
+  
+  .advantage-section input,
+  .feature-section input,
+  .solution-card input {
+    font-size: 16px;
+  }
+  
+  .advantage-section textarea,
+  .feature-section textarea,
+  .solution-card textarea {
+    font-size: 16px;
+  }
+  
+  .solution-card input[type="file"] {
+    margin-top: 10px;
+  }
+  
+  .solution-card img {
+    width: 100px;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .product-info-container {
+      padding: 15px;
+    }
+  
+    .product-info-container h2 {
+      font-size: 24px;
+    }
+  
+    .product-info-container .form-group {
+      margin-bottom: 15px;
+    }
+  
+    .product-info-container button,
+    .product-info-container button.remove-btn,
+    .product-info-container button.add-btn,
+    .product-info-container button.submit-btn {
+      width: 100%;
+      padding: 12px 18px;
+      font-size: 14px;
+    }
+  }
+  

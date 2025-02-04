@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../Components/Navbar/Navbar'
 import HeroSection from '../Components/HeroSection/HeroSection'
 import AboutSection from '../Components/AboutDescription/AboutSection'
@@ -8,6 +8,7 @@ import CustomMadeSection from '../Components/CustomMadeSection/CustomMadeSection
 import StoreSection from '../Components/StoreSection/StoreSection'
 import BrowsSection from '../Components/BrowseSection/BrowseSection'
 import ContactSection from '../Components/ContactSection/ContactSection'
+import GoogleMeet from '../Components/GoogleMeet/GoogleMeet'
 import Footer from '../Components/Footer/Footer'
 
 const Homepage = () => {
@@ -22,6 +23,7 @@ const Homepage = () => {
         <StoreSection/>
         <BrowsSection/>
         <ContactSection/>
+        <GoogleMeet/>
         <Footer/>
     </div>
   )

@@ -34,7 +34,7 @@ const CustomMadeSection = () => {
                 <div className="right-side">
                     <h3>SOLUTIONS <span className='highlight'>CUSTOM MADE</span></h3>
                     <p>{description}</p>
-                    <button onClick={() => navigate('/about-us')}>About us</button>
+                    <button className='about-btn-customemade' onClick={() => navigate('/about-us')}>About us</button>
                 </div>
 
                 </div>

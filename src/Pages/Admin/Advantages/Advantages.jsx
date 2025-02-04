@@ -64,12 +64,13 @@ const AdvantagesSectionUpdate = () => {
     const formData = new FormData();
   
     // Loop through the cards and append each image and title
-    cards.cards.forEach((card) => {
-        if (card.image) {
-          formData.append('images', card.image);  // Append as 'images'
-        }
-        formData.append(`cardtitle[]`, card.title); // Append titles as 'cardtitle[]'
-      });
+    cards.cards.forEach((card, index) => {
+      if (card.image) {
+        formData.append(`image${index}`, card.image);
+      }
+      formData.append('cardtitle[]', card.title);
+    });
+    
       
   
     // Debugging: Log the FormData to check if the data is correct

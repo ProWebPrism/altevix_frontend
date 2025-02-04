@@ -4,12 +4,7 @@ import './PassengerElevators.css';
 export default function ElevatorSlider({ title, slides }) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // const slides = [
-  //   { image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-17%20160822-u44UHutuvM9nBMssFGv6ClRemjXESW.png', caption: 'Altivex Elevator 1' },
-  //   { image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-17%20160900-9m17Ek7w4nFWJm0zU4b0o2sCUx-E1Jml.png', caption: 'Altivex Elevator 2' },
-  //   { image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-17%20160922-K0tA7ZLXftJvHkKAdctmX1sQwwccTkbJ.png', caption: 'Altivex Elevator 3' },
-  //   { image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-17%20160922-K0tA7ZLXftJvHkKAdctmX1sQwwccTkbJ.png', caption: 'Altivex Elevator 4' },
-  // ];
+
 
   useEffect(() => {
     const interval = setInterval(() => {

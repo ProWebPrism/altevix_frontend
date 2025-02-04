@@ -62,10 +62,17 @@
   @media (max-width: 768px) {
     .who-we-are-content {
       flex-direction: column;
-    }
-    .left-side {
-      display: flex;
       justify-content: center;
       align-items: center;
     }
+    .who-we-are-content .left-side {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+    }
+    .who-we-are-content .right-side {
+      width: 90%;
+    }
+
   }

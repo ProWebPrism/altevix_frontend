@@ -54,13 +54,19 @@
     height: auto;
     margin-bottom: 40px;
   }
-  @media (max-width: 1024px) {
+  @media (max-width: 1200px) {
+    .card {
+      width: 32%; 
+    }
+  }
+
+  @media (max-width: 991px) {
     .card {
       width: 48%; /* 2 cards per row */
     }
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 425px) {
     .card {
       width: 100%; /* 1 card per row */
     }

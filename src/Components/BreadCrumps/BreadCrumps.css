@@ -27,3 +27,7 @@
 .breadcrump-list li.active{
     color: #DC0000;
 }
+.breadcrump-list a {
+    text-decoration: none;
+    color: black;
+}
